@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  bot_db:
+      image: 'postgres:latest'
+      restart: always
+      volumes:
+        - './postgres_data:/var/lib/postgresql/data'
+      env_file:
+        - bot-db-vars.env
+      ports:
+        - '5433:5432'
+      command: -p 5432
+  bot-mhrise:
+    image: bot_mhrise
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command: python main.py
+    volumes:
+      - .:/bot
+    depends_on: 
+      - bot_db
+

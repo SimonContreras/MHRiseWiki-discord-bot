@@ -76,26 +76,26 @@ class CommandErrorHandler(commands.Cog):
 
         elif isinstance(error, commands.CommandNotFound):
             message = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'command_not_found')
-            embed = ErrorEmbed(message)
+            embed = ErrorEmbed(message, ctx)
             await ctx.send(embed=embed.main())
 
         elif isinstance(error, commands.DisabledCommand):
             msg = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'disabled_command')
             msg.translation = msg.translation.format(ctx.command)
-            embed = ErrorEmbed(msg)
+            embed = ErrorEmbed(msg, ctx)
             await ctx.send(embed=embed.main())
         
         elif isinstance(error, commands.MissingRequiredArgument):
             msg = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'missing_required_argument')
             msg.translation = msg.translation.format(ctx.invoked_with, ctx.prefix, ctx.command) 
-            embed = ErrorEmbed(msg)
+            embed = ErrorEmbed(msg, ctx)
             await ctx.send(embed=embed.main())
 
         elif isinstance(error, commands.NoPrivateMessage):
             try:
                 msg = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'no_private_message') 
                 msg.translation = msg.translation.format(ctx.command)
-                embed = ErrorEmbed(msg)
+                embed = ErrorEmbed(msg, ctx)
                 await ctx.author.send(embed=embed.main())
             except discord.HTTPException:
                 pass
@@ -104,7 +104,7 @@ class CommandErrorHandler(commands.Cog):
             try:
                 msg = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'private_message_only') 
                 msg.translation = msg.translation.format(ctx.command)
-                embed = ErrorEmbed(msg)
+                embed = ErrorEmbed(msg, ctx)
                 await ctx.send(embed=embed.main())
             except discord.HTTPException:
                 pass
@@ -112,12 +112,12 @@ class CommandErrorHandler(commands.Cog):
         # For this error example we check to see where it came from...
         elif isinstance(error, commands.BadArgument):
             message = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'bad_argument') 
-            embed = ErrorEmbed(message)
+            embed = ErrorEmbed(message, ctx)
             await ctx.send(embed=embed.main())
 
         elif isinstance(error, commands.UserInputError):
             message = message = self.__dbHeader.get_error_msg(str(ctx.guild.id), 'user_input_error') 
-            embed = ErrorEmbed(message)
+            embed = ErrorEmbed(message, ctx)
             await ctx.send(embed=embed.main())
         else:
             # All other Errors not returned come here. And we can just print the default TraceBack.

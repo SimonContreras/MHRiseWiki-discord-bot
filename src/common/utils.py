@@ -163,9 +163,8 @@ def weapon_to_emoji(ctx, weapon: str):
         'bow': 'bow',
 
     }
-    
+    e = ' '
     for emoji in ctx.guild.emojis:
-        e = ' '
         if (wp[weapon] == emoji.name) and (emoji.is_usable()):
             e = f'''<:{emoji.name}:{emoji.id}>'''
             break

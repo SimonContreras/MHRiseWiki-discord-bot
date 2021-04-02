@@ -26,6 +26,17 @@ class dbMonster():
         
         return MonsterSerializer(m_q, list(habitat), list(hitzones), list(breaks), guild_lang).serialize()
     
+    @orm.db_session
+    def get_hzv(self, guild_id: str, monster: str):
+        guild_lang = orm.select(g.language.id for g in Guild if g.id == guild_id).first()
+        m_t = orm.select(mt for mt in MonsterText \
+            if (mt.name == monster and mt.language.id == guild_lang)).first()
+        
+        if m_t is None:
+            return None
+        
+        return {'name': m_t.name, 'img-url': m_t.hzv_img}
+    
 
 db_monster = dbMonster()
 

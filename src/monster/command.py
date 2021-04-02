@@ -31,6 +31,7 @@ class MonsterCog(commands.Cog):
         self.__dbHeader = db_header
         self.__dbMonster = db_monster
         self.__assets_route = os.getenv('THUMBNAIL_ROUTE')
+        self._monster_img_route = os.getenv('MONSTER_IMG_ROUTE')
         
 
     @commands.command(name='monstruo', aliases=['monster'])
@@ -120,7 +121,7 @@ class MonsterCog(commands.Cog):
     @commands.command(name='hitzones')
     async def hzv(self, ctx: commands.Context, *args):
         monster_name = InputParser(args).concat()
-        dct = self.__dbMonster.get_monster(str(ctx.guild.id), monster_name)
+        dct = self.__dbMonster.get_hzv(str(ctx.guild.id), monster_name)
         if dct is None:
             dct = self.__dbHeader.entity_not_found(str(ctx.guild.id), 'monster_not_found')
             foooter = self.__dbHeader.get_footer(str(ctx.guild.id), 'general_footer')
@@ -128,6 +129,8 @@ class MonsterCog(commands.Cog):
             await ctx.send(embed=embed.notFound())
 
         else:
-            embed = MonsterEmbed(dct)
+            headers = {}
+            embed = MonsterEmbed(dct,headers)
             embed_hzv = embed.hzv()
-            await ctx.send(embed=embed_hzv)
+            hzv_file = discord.File(self._monster_img_route+'hzv/'+dct['img-url'], filename=dct['img-url'])
+            await ctx.send(embed=embed_hzv, file=hzv_file)

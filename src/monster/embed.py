@@ -1,7 +1,10 @@
+import os
 import discord
 import datetime
 
 from src.common.utils import to_stars
+
+MONSTER_IMG_ROUTE = os.getenv('MONSTER_IMG_ROUTE')
 
 class MonsterEmbed(discord.Embed):
     """
@@ -124,17 +127,9 @@ class MonsterEmbed(discord.Embed):
         
             
         """
-        embed= discord.Embed(title=self.__dct['name'], color=discord.Color.blue())
-        embed.set_thumbnail(url=self.__dct['img-url'])
-        embed.add_field(name="Especie", value=self.__dct['species'], inline=True)
-
-        element_text = ':fire: {} :droplet: {} :zap: {} :snowflake: {} :dragon: {}'
-        embed.add_field(name="Daño Elementos", value=element_text, inline=False)
-
-        weapon_text = 'Corte: {} Impacto: {} Rango: {}'
-        embed.add_field(name="Daño tipo de arma", value=weapon_text, inline=False)
-        
+        embed= discord.Embed(title=self.__dct['name'] + ' Hitzones', color=discord.Color.blue())
+        embed.set_image(url=f'''attachment://{self.__dct['img-url']}''')
         embed.timestamp = datetime.datetime.now()
-        embed.set_footer(text=self.__dct['name'])
+        embed.set_footer(text=self.__dct['name'] + ' Hitzones')
 
         return embed

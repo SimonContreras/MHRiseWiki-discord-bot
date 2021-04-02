@@ -1,6 +1,7 @@
 import os
 from pony.orm import *
-
+from dotenv import load_dotenv
+load_dotenv()
 
 db = Database()
 db.bind(provider=os.getenv('PROVIDER_DB'), 
@@ -178,6 +179,12 @@ class Monster(db.Entity):
     weakness_paralysis = Optional(int)
     weakness_blast = Optional(int)
     weakness_stun = Optional(int)
+    weakness_exhaust = Optional(int)
+    
+    plague_fire = Optional(str)
+    plague_water = Optional(str)
+    pague_thunder = Optional(str)
+    plague_ice = Optional(str)
 
     alt_weakness_fire = Optional(int)
     alt_weakness_water = Optional(int)
@@ -190,6 +197,12 @@ class Monster(db.Entity):
     alt_weakness_paralysis = Optional(int)
     alt_weakness_blast = Optional(int)
     alt_weakness_stun = Optional(int)
+    alt_weakness_exhaust = Optional(int)
+    
+    alt_plague_fire = Optional(str)
+    alt_plague_water = Optional(str)
+    alt_pague_thunder = Optional(str)
+    alt_plague_ice = Optional(str)
 
     ailment_roar = Optional(str)
     ailment_wind = Optional(str)
@@ -201,14 +214,13 @@ class Monster(db.Entity):
     ailment_iceblight = Required(bool, default=False)
     ailment_dragonblight = Required(bool, default=False)
     ailment_blastblight = Required(bool, default=False)
-    ailment_regional = Required(bool, default=False)
+
     ailment_poison = Required(bool, default=False)
     ailment_sleep = Required(bool, default=False)
     ailment_paralysis = Required(bool, default=False)
     ailment_bleed = Required(bool, default=False)
     ailment_stun = Required(bool, default=False)
     ailment_mud = Required(bool, default=False)
-    ailment_effluvia = Required(bool, default=False)
 
     translations = Set('MonsterText')
     hitzones = Set('MonsterHitzone')
@@ -224,6 +236,10 @@ class MonsterText(db.Entity):
     name = Optional(str)
     species = Optional(str)
     description = Optional(str)
+    hzv_img = Optional(str)
+    drops_low_rank_img = Optional(str)
+    drops_high_rank_img = Optional(str)
+    drops_g_rank_img = Optional(str)
     alt_state_description = Required(str, default='-')
     PrimaryKey(monster, language)
 

@@ -76,16 +76,12 @@ MH RISE Entitites and relations
 class Item(db.Entity):
     id = PrimaryKey(int, auto=True)
     category = Optional(str)
-    subcategory = Optional(str)
     rarity = Optional(int)
     buy_price = Optional(int)
     sell_price = Optional(int)
     carry_limit = Optional(int)
-    points = Optional(int)
     craftable = Required(bool)
 
-    icon_name = Optional(str)
-    icon_color = Optional(str)
 
     translations = Set('ItemText')
     comb_first = Set('ItemCombination', reverse='first')
@@ -138,13 +134,12 @@ class LocationItem(db.Entity):
     # note: it is possible for there to be multiple entries of the same thing.
     # therefore, this join-table has no "real id" and uses a surrogate instead
     id = PrimaryKey(int, auto=True)
-    location_id = Required(Location)
+    location = Required(Location)
     area = Required(int)
     rank = Required(str)
     item = Required(Item)
     stack = Required(int)
     percentage = Required(int)
-    nodes = Required(int, default=1)
 
 class LocationCamp(db.Entity):
     """Defines a location camp and a name entry. 
@@ -158,33 +153,33 @@ class LocationCamp(db.Entity):
 
 class Monster(db.Entity):
     id = PrimaryKey(int, auto=True)
-    size = Optional(str)
-    icon = Optional(str)
+    size = Required(str)
+    icon = Required(str)
+    danger_level= Required(int)
 
     pitfall_trap = Required(bool, default=False)
     shock_trap = Required(bool, default=False)
-    vine_trap = Required(bool, default=False)
 
     has_weakness = Required(bool, default=False)
     has_alt_weakness = Required(bool, default=False)
 
-    weakness_fire = Optional(int)
-    weakness_water = Optional(int)
-    weakness_ice = Optional(int)
-    weakness_thunder = Optional(int)
-    weakness_dragon = Optional(int)
+    weakness_fire = Required(int)
+    weakness_water = Required(int)
+    weakness_ice = Required(int)
+    weakness_thunder = Required(int)
+    weakness_dragon = Required(int)
 
-    weakness_poison = Optional(int)
-    weakness_sleep = Optional(int)
-    weakness_paralysis = Optional(int)
-    weakness_blast = Optional(int)
-    weakness_stun = Optional(int)
-    weakness_exhaust = Optional(int)
+    weakness_poison = Required(int)
+    weakness_sleep = Required(int)
+    weakness_paralysis = Required(int)
+    weakness_blast = Required(int)
+    weakness_stun = Required(int)
+    weakness_exhaust = Required(int)
     
-    plague_fire = Optional(str)
-    plague_water = Optional(str)
-    pague_thunder = Optional(str)
-    plague_ice = Optional(str)
+    plague_fire = Required(int)
+    plague_water = Required(int)
+    pague_thunder = Required(int)
+    plague_ice = Required(int)
 
     alt_weakness_fire = Optional(int)
     alt_weakness_water = Optional(int)
@@ -199,14 +194,14 @@ class Monster(db.Entity):
     alt_weakness_stun = Optional(int)
     alt_weakness_exhaust = Optional(int)
     
-    alt_plague_fire = Optional(str)
-    alt_plague_water = Optional(str)
-    alt_pague_thunder = Optional(str)
-    alt_plague_ice = Optional(str)
+    alt_plague_fire = Optional(int)
+    alt_plague_water = Optional(int)
+    alt_pague_thunder = Optional(int)
+    alt_plague_ice = Optional(int)
 
-    ailment_roar = Optional(str)
-    ailment_wind = Optional(str)
-    ailment_tremor = Optional(str)
+    ailment_roar = Required(str)
+    ailment_wind = Required(str)
+    ailment_tremor = Required(str)
     ailment_defensedown = Required(bool, default=False)
     ailment_fireblight = Required(bool, default=False)
     ailment_waterblight = Required(bool, default=False)
@@ -221,6 +216,10 @@ class Monster(db.Entity):
     ailment_bleed = Required(bool, default=False)
     ailment_stun = Required(bool, default=False)
     ailment_mud = Required(bool, default=False)
+    ailment_bubbleblight = Required(bool, default=False)
+    ailment_dung = Required(bool, default=False)
+    ailment_hellfireblight = Required(bool, default=False)
+    ailment_webbed = Required(bool, default=False)
 
     translations = Set('MonsterText')
     hitzones = Set('MonsterHitzone')

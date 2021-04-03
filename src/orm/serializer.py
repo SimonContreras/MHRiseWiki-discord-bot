@@ -55,14 +55,13 @@ class HelpSerializer():
 
 class MonsterSerializer():
 
-    def __init__(self, monster, habitats, hitzones, breaks, language: int):
-        self.__m = monster
-        self.__h = habitats
-        self.hz = hitzones
-        self.__b = breaks
-        self.__lang = language
+    def __init__(self, monster, habitats, breaks, language: int):
+        self._m = monster
+        self._h = habitats
+        self._b = breaks
+        self._lang = language
 
-    def __translate(self, key:str):
+    def _translate(self, key:str):
         esp = {
             'roar': 'rugido',
             'wind': 'presion viento',
@@ -74,10 +73,8 @@ class MonsterSerializer():
             'iceblight': 'hielo',
             'dragonblight': 'dragon',
             'blastblight': 'nitro',
-            'regional': '-',
             'bleed': 'sangrado',
             'mud': 'barro',
-            'effluvia': 'efluvio',
             'fire':'fuego',
             'water':'agua',
             'ice':'hielo',
@@ -101,10 +98,8 @@ class MonsterSerializer():
             'iceblight': 'iceblight',
             'dragonblight': 'dragonblight',
             'blastblight': 'blastblight',
-            'regional': '-',
             'bleed': 'bleed',
             'mud': 'mud',
-            'effluvia': 'effluvia',
             'fire':'fire',
             'water':'water',
             'ice':'ice',
@@ -117,14 +112,14 @@ class MonsterSerializer():
             'stun':'stun',
         }
         try:
-            if self.__lang == 1:
+            if self._lang == 1:
                 return esp[key]
             return eng[key]
         except KeyError:
             return None
     
-    def __format_stats(self):
-        m_stat = self.__m[1].to_dict()
+    def _format_stats(self):
+        m_stat = self._m[1].to_dict()
         weaknesses_0 = []
         weaknesses_1 = []
         weaknesses_2 = []
@@ -137,7 +132,7 @@ class MonsterSerializer():
         for w in m_stat:
             key = w.split('_')
             if len(key) > 1:
-                translation = self.__translate(key[-1])
+                translation = self._translate(key[-1])
                 if translation is not None:
                     if key[0] == 'ailment' and m_stat[w] == True:
                         ailments.append(translation)
@@ -159,71 +154,57 @@ class MonsterSerializer():
                             alt_weaknesses_2.append(translation)
                         elif m_stat[w] == 3:
                             alt_weaknesses_3.append(translation)
-                        
+        
+        weaknesses_0 = '-' if ((type(weaknesses_0) == list) and (len(weaknesses_0) == 0)) else weaknesses_0
+        weaknesses_1 = '-' if ((type(weaknesses_1) == list) and (len(weaknesses_1) == 0)) else weaknesses_1
+        weaknesses_2 = '-' if ((type(weaknesses_2) == list) and (len(weaknesses_2) == 0)) else weaknesses_2
+        weaknesses_3 = '-' if ((type(weaknesses_3) == list) and (len(weaknesses_3) == 0)) else weaknesses_3
+        ailments = '-' if ((type(ailments) == list) and (len(ailments) == 0)) else ailments
+        alt_weaknesses_0 = '-' if ((type(alt_weaknesses_0) == list) and (len(alt_weaknesses_0) == 0)) else alt_weaknesses_0
+        alt_weaknesses_1 = '-' if ((type(alt_weaknesses_1) == list) and (len(alt_weaknesses_1) == 0)) else alt_weaknesses_1
+        alt_weaknesses_2 = '-' if ((type(alt_weaknesses_2) == list) and (len(alt_weaknesses_2) == 0)) else alt_weaknesses_2
+        alt_weaknesses_3 = '-' if ((type(alt_weaknesses_3) == list) and (len(alt_weaknesses_3) == 0)) else alt_weaknesses_3
+        
         return weaknesses_0, weaknesses_1, weaknesses_2, weaknesses_3, \
             alt_weaknesses_0, alt_weaknesses_1, alt_weaknesses_2, alt_weaknesses_3, ailments
 
-    def __format_locations(self):
+    def _format_locations(self):
         locations = []
-        if len(self.__h) > 1:
-            for h in self.__h:
+        if len(self._h) > 1:
+            for h in self._h:
                 locations.append(h.name)
-        return locations
+        else:
+            return '-'
 
-    def __format_breakables(self):
+    def _format_breakables(self):
         breakables = []
-        if len(self.__b) > 1:
-            for b in self.__b:
+        if len(self._b) > 1:
+            for b in self._b:
                 breakables.append(b[1].part_name)
-        return breakables
-
-    def __format_summary_hz(self):
-        hitzones = []
-        alt_hitzones = []
-        if len(self.hz) > 1:
-            for hz in self.hz:
-                dct = {
-                    'part':hz[1].name,
-                    'sever':hz[0].cut,
-                    'blunt':hz[0].impact,
-                    'ranged':hz[0].shot,
-                    'fire':hz[0].fire,
-                    'water':hz[0].water,
-                    'thunder':hz[0].thunder,
-                    'ice':hz[0].ice,
-                    'dragon':hz[0].dragon,
-                    'stunt':hz[0].ko,
-                    }
-                if hz[0].alt:
-                    alt_hitzones.append(dct)
-                else:
-                    hitzones.append(dct)
-        return hitzones, alt_hitzones
+        else:
+            return '-'
         
     def serialize(self):
         w_0, w_1, w_2, w_3, \
-            alt_0, alt_1, alt_2, alt_3, a = self.__format_stats()
-        sum_hitzones, alt_sum_hitzones = self.__format_summary_hz()
+            alt_0, alt_1, alt_2, alt_3, a = self._format_stats()
         main_dct = {
-            'name': self.__m[0].name,
-            'species': self.__m[0].species,
-            'description':self.__m[0].description,
-            'img-url': self.__m[1].icon,
+            'name': self._m[0].name,
+            'species': self._m[0].species,
+            'description':self._m[0].description,
+            'img-url': self._m[1].icon,
             'ailments': a,
             'inmune': w_0,
             'weakness-3': w_3,
             'weakness-2': w_2,
             'weakness-1': w_1,
-            'has-alt-weakness': self.__m[1].has_alt_weakness,
-            'alt-state-description': self.__m[0].alt_state_description,
+            'has-alt-weakness': self._m[1].has_alt_weakness,
+            'alt-state-description': self._m[0].alt_state_description,
             'alt-inmune': alt_0,
             'alt-weakness-3': alt_3,
             'alt-weakness-2': alt_2,
             'alt-weakness-1': alt_1,
-            'locations': self.__format_locations(),
-            'breakable': self.__format_breakables(),
-            'weak-points': sum_hitzones,
-            'alt-weak-points': alt_sum_hitzones
+            'locations': self._format_locations(),
+            'breakable': self._format_breakables(),
         }
         return main_dct
 

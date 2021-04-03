@@ -30,7 +30,6 @@ class MonsterCog(commands.Cog):
         self.description = '''Monsters info commands MH Rise Wiki'''
         self.__dbHeader = db_header
         self.__dbMonster = db_monster
-        self.__assets_route = os.getenv('THUMBNAIL_ROUTE')
         self._monster_img_route = os.getenv('MONSTER_IMG_ROUTE')
         
 
@@ -61,26 +60,22 @@ class MonsterCog(commands.Cog):
 
         else:
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
-            thumbnail_file = discord.File(self.__assets_route+dct['img-url'], filename=dct['img-url'])
+            thumbnail_file = discord.File(self._monster_img_route+'icon/'+dct['img-url'], filename=dct['img-url'])
             embed = MonsterEmbed(dct, headers)
             page1, page2 = embed.main()
-            page1_1, page2_1 = embed.details()
                        
             if page2 is None:
                 await ctx.send(embed = page1, file=thumbnail_file)
-                await ctx.send(embed=page1_1)
             else:
                 main_pages = [page1, page2]
-                detail_pages = [page1_1, page2_1]
                 
                 
                 message = await ctx.send(embed = page1, file=thumbnail_file)
-                message2 = await ctx.send(embed=page1_1)
-                await message2.add_reaction('⏮')
-                await message2.add_reaction('◀')
-                await message2.add_reaction('▶')
-                await message2.add_reaction('⏭')
-                await message2.add_reaction('⏹')
+                await message.add_reaction('⏮')
+                await message.add_reaction('◀')
+                await message.add_reaction('▶')
+                await message.add_reaction('⏭')
+                await message.add_reaction('⏹')
                 
                 def check(reaction, user):
                     return user == ctx.author
@@ -92,31 +87,27 @@ class MonsterCog(commands.Cog):
                     if str(reaction) == '⏮':
                         i = 0
                         await message.edit(embed = main_pages[i])
-                        await message2.edit(embed = detail_pages[i])
                     elif str(reaction) == '◀':
                         if i > 0:
                             i -= 1
                             await message.edit(embed = main_pages[i])
-                            await message2.edit(embed = detail_pages[i])
                     elif str(reaction) == '▶':
                         if i < 1:
                             i += 1
                             await message.edit(embed = main_pages[i])
-                            await message2.edit(embed = detail_pages[i])
                     elif str(reaction) == '⏭':
                         i = 1
                         await message.edit(embed = main_pages[i])
-                        await message2.edit(embed = detail_pages[i])
                     elif str(reaction) == '⏹':
                             break
                     
                     try:
                         reaction, user = await self.bot.wait_for(event='reaction_add', timeout = 30.0, check = check)
-                        await message2.remove_reaction(reaction, user)
+                        await message.remove_reaction(reaction, user)
                     except:
                         break
 
-                await message2.clear_reactions()
+                await message.clear_reactions()
     
     @commands.command(name='hitzones')
     async def hzv(self, ctx: commands.Context, *args):
@@ -133,4 +124,35 @@ class MonsterCog(commands.Cog):
             embed = MonsterEmbed(dct,headers)
             embed_hzv = embed.hzv()
             hzv_file = discord.File(self._monster_img_route+'hzv/'+dct['img-url'], filename=dct['img-url'])
+            await ctx.send(embed=embed_hzv, file=hzv_file)
+    
+
+    def __drops_path(self, rank:str, lang:int):
+        if lang == 1:
+            if rank in ['high', 'alto']:
+                return 'drops/alto/'
+            elif rank in ['low', 'alto']:
+                return 'drops/bajo/'
+        elif lang == 2:
+            if rank in ['high', 'alto']:
+                return 'drops/high/'
+            elif rank in ['low', 'alto']:
+                return 'drops/low/'
+
+    @commands.command(name='materiales', aliases=['materials'])
+    async def drops(self, ctx: commands.Context, *args):
+        monster_name, rank = InputParser(args).triplet()
+        dct = self.__dbMonster.get_drops(str(ctx.guild.id), monster_name, rank)
+        if dct is None:
+            dct = self.__dbHeader.entity_not_found(str(ctx.guild.id), 'monster_not_found')
+            foooter = self.__dbHeader.get_footer(str(ctx.guild.id), 'general_footer')
+            embed = CommonEmbed(dct, foooter, ctx)
+            await ctx.send(embed=embed.notFound())
+
+        else:
+            headers = {}
+            embed = MonsterEmbed(dct,headers)
+            embed_hzv = embed.drops()
+            sub_path = self.__drops_path(rank, dct['language'])
+            hzv_file = discord.File(self._monster_img_route+sub_path+dct['img-url'], filename=dct['img-url'])
             await ctx.send(embed=embed_hzv, file=hzv_file)

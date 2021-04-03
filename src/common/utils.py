@@ -34,6 +34,12 @@ class InputParser():
         if len(self.args) == 1:
             return self.args[0]
         return ' '.join(self.args).lower()
+    
+    def triplet(self):
+        if len(self.args) == 2:
+            return self.args[0], self.args[1]
+        else:
+            return ' '.join(self.args[:-1]).lower(), self.args[-1].lower()
 
 def to_stars(value: int):
     """ Retrieve string of stars emojis based in certain threshold rule
@@ -82,7 +88,6 @@ def color_by_rarity(rarity: int):
         12: discord.Color.from_rgb(204, 229, 255)
     }
     return color[rarity]
-
 
 def num_to_emoji(num:int):
     """ Retrieve emoji related to a number
@@ -170,3 +175,12 @@ def weapon_to_emoji(ctx, weapon: str):
             break
     
     return e
+
+def format_uppercase(s:str):
+    words = s.split(' ')
+    if len(words) == 2:
+        return f'''{words[0].capitalize()} {words[1].capitalize()}'''
+    elif len(words) == 3:
+        return f'''{words[0].capitalize()} {words[1]} {words[2].capitalize()}'''
+    else:
+        return words[0].capitalize()

@@ -169,10 +169,8 @@ class MonsterSerializer():
             alt_weaknesses_0, alt_weaknesses_1, alt_weaknesses_2, alt_weaknesses_3, ailments
 
     def _format_locations(self):
-        locations = []
-        if len(self._h) > 1:
-            for h in self._h:
-                locations.append(h.name)
+        if len(self._h) >= 1:
+            return self._h
         else:
             return '-'
 

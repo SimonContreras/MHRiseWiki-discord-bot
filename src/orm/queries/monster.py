@@ -1,12 +1,13 @@
 from pony import orm
-from src.orm.models import (Guild, MonsterText, MonsterHabitat, MonsterHitzone, 
-MonsterHitzoneText, MonsterBreak, MonsterBreakText, Location)
+from src.orm.models import (Guild, MonsterText, MonsterBreak, MonsterBreakText, db)
+from src.orm.queries.raw_sql import habitats_sql
 from src.orm.serializer import MonsterSerializer
 
 class dbMonster():
 
     def __init__(self):
         self = self
+        self.__db = db
 
     @orm.db_session
     def get_monster(self, guild_id: str, monster: str):
@@ -16,9 +17,9 @@ class dbMonster():
         
         if m_q is None:
             return None
-        
-        habitat = orm.select(l for h in MonsterHabitat for l in Location \
-            if (h.monster == m_q[1] and l.language.id == guild_lang))
+
+        monster_id = m_q[1].id
+        habitat = self.__db.select(habitats_sql)
         breaks = orm.select((b, bt) for b in MonsterBreak for bt in MonsterBreakText \
             if (b.monster == m_q[1] and bt.monster_break == b and bt.language.id == guild_lang))
         

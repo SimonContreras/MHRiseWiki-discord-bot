@@ -60,3 +60,10 @@ skill_armor_sql = '''SELECT
                             JOIN ArmorSkill as a_s ON a_s.armor = a.id
                             JOIN SkillTreeText AS st_t ON st_t.language = $guild_lang AND a_s.skilltree = st_t.skillTree
                             WHERE a.armorset = $armorset_id'''
+
+
+habitats_sql = '''SELECT 
+                        l.name AS "location"
+                        FROM monsterhabitat AS mh
+                        JOIN location AS l ON l.id = mh.location_id AND l.language = $guild_lang
+                        WHERE mh.monster = $monster_id'''

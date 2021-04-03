@@ -256,3 +256,6 @@ def format_uppercase(s:str):
         return f'''{words[0].capitalize()} {words[1]} {words[2].capitalize()}'''
     else:
         return words[0].capitalize()
+
+def capitalize_join_list(l:list):
+    return '\n'.join([format_uppercase(h) for h in l])

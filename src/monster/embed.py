@@ -4,7 +4,7 @@ import datetime
 
 from discord.ext import commands
 
-from src.common.utils import format_uppercase, status_or_element_to_emoji
+from src.common.utils import format_uppercase, status_or_element_to_emoji, capitalize_join_list
 
 MONSTER_IMG_ROUTE = os.getenv('MONSTER_IMG_ROUTE')
 
@@ -57,8 +57,8 @@ class MonsterEmbed(discord.Embed):
         embed.add_field(name=self.h['weakness-3'], value=status_or_element_to_emoji(self.ctx,self.dct['weakness-3']), inline=True)
         embed.add_field(name=self.h['weakness-2'], value=status_or_element_to_emoji(self.ctx,self.dct['weakness-2']), inline=True)
         embed.add_field(name=self.h['weakness-1'], value=status_or_element_to_emoji(self.ctx,self.dct['weakness-1']), inline=True)
-        embed.add_field(name=self.h['breakable'], value=status_or_element_to_emoji(self.ctx,self.dct['breakable']), inline=True)
-        embed.add_field(name=self.h['location'], value=status_or_element_to_emoji(self.ctx,self.dct['locations']), inline=True)
+        embed.add_field(name=self.h['breakable'], value=capitalize_join_list(self.dct['breakable']), inline=True)
+        embed.add_field(name=self.h['location'], value=capitalize_join_list(self.dct['locations']), inline=True)
         embed.timestamp = datetime.datetime.now()
         embed.set_footer(text=format_uppercase(self.dct['name']))
 

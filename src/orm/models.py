@@ -245,9 +245,9 @@ class MonsterText(db.Entity):
 class MonsterHabitat(db.Entity):
     monster = Required(Monster)
     location = Required(Location)
-    start_area = Optional(str)
-    move_area = Optional(str)
-    rest_area = Optional(str)
+    start_area = Required(int, default=0)
+    move_area = Required(int, default=0)
+    rest_area = Required(int, default=0)
     PrimaryKey(monster, location)
 
 class MonsterHitzone(db.Entity):

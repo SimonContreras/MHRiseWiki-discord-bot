@@ -29,7 +29,7 @@ class dbCommand():
         query_header = orm.select( c for c in Command for g in Guild \
              if (g.id == guild_id) and (c.name == norm_command) and (c.scope == scope) and (c.language == g.language))
         query_commands = orm.select((c, a) for c in Command for g in Guild for a in Argument\
-             if (a.command.id == c.id and c.name != norm_command) and (g.id == guild_id and c.language == g.language and c.scope == scope))
+             if ((c.active == True) and (a.command.id == c.id) and (c.name != norm_command)) and (g.id == guild_id and c.language == g.language and c.scope == scope))
         return  HelpSerializer(list(query_commands), query_header.first()).serialize()
     
     @orm.db_session

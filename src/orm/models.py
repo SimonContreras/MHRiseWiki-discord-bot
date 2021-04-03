@@ -49,6 +49,7 @@ class Command(db.Entity):
     title = Required(str)
     description = Required(str)
     scope = Required(str, default='anyone')
+    active = Required(bool, default=False)
     arguments = Set('Argument')
     headers = Set('Header')
 

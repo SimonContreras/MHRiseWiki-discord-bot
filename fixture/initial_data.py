@@ -13,6 +13,7 @@ def common_errors_headers():
         name = 'noCommand_esp',
         title = 'Error',
         language = spanish,
+        active=True,
         description = 'No command related, only control message'
     )
 
@@ -72,6 +73,7 @@ def common_errors_headers():
         name = 'noCommand_eng',
         title = 'Error',
         language = english,
+        active=True,
         description = 'No command related, only control message'
     )
 
@@ -142,6 +144,7 @@ def language_errors_headers():
         name = 'cambiarIdioma',
         title = 'Cambiar Idioma',
         scope = 'admin',
+        active = True,
         description = 'Cambiar Idioma del bot.'
     )
 
@@ -150,6 +153,7 @@ def language_errors_headers():
         name = 'changeLanguage',
         title = 'Change Language',
         scope = 'admin',
+        active = True,
         description = 'Change Language of the bot.'
     )
 
@@ -204,6 +208,7 @@ def insert_help_commands_and_args():
         language = spanish,
         name = 'ayuda',
         title = 'Comandos disponibles en la Wiki:',
+        active = True,
         description = 'Lista comandos disponibles.'
     )
 
@@ -211,6 +216,7 @@ def insert_help_commands_and_args():
         language = english,
         name = 'help',
         title = 'Commands available in the Wiki:',
+        active = True,
         description = 'List available commands.'
     )
 
@@ -218,6 +224,7 @@ def insert_help_commands_and_args():
         language = spanish,
         name = 'ayudaAdmin',
         title = 'Comandos de administración:',
+        active = True,
         description = 'Lista comandos disponibles.',
         scope='admin'
     )
@@ -226,6 +233,7 @@ def insert_help_commands_and_args():
         language = english,
         name = 'adminHelp',
         title = 'Administration commands:',
+        active = True,
         description = 'List available commands.',
         scope='admin'
     )
@@ -253,6 +261,7 @@ def insert_help_commands_and_args():
         language = spanish,
         name = 'monstruo',
         title = 'Información Monstruo',
+        active = True,
         description = 'Lista información básica del monstruo.'
     )
 
@@ -260,6 +269,7 @@ def insert_help_commands_and_args():
         language = english,
         name = 'monster',
         title = 'Monster Information',
+        active = True,
         description = 'List basic information about the monster.'
     )
 
@@ -277,6 +287,7 @@ def insert_help_commands_and_args():
         language = spanish,
         name = 'hitzones',
         title = 'Hitzones del monstruo',
+        active = True,
         description = 'Lista información numérica detallada del monstruo.'
     )
 
@@ -284,6 +295,7 @@ def insert_help_commands_and_args():
         language = english,
         name = 'hitzones',
         title = 'Monster Hitzones',
+        active = True,
         description = 'List detailed numeric information about the monster.'
     )
 
@@ -440,6 +452,32 @@ def insert_help_commands_and_args():
         name = '[weapon-name]',
         command = weapon
     )
+    mats = Command(
+        language = spanish,
+        name = 'mats',
+        title = 'Información materiales monstruo',
+        active = True,
+        description = 'Muestra materiales que da como recompensa un monstruo en un rango específico (alto/bajo).'
+    )
+
+    drops = Command(
+        language = english,
+        name = 'drops',
+        title = 'Monster drops information',
+        active = True,
+        description = 'Show reward materials from a certain monster in a specific rank (high/low).'
+    )
+
+    arg_esp = Argument(
+        name = '[nombre-monstruo] [rango]',
+        command = mats
+    )
+
+    arg_eng = Argument(
+        name = '[monster-name] [rank]',
+        command = drops
+    )
+    
     commit()
 
 def command_not_found_errors_headers():

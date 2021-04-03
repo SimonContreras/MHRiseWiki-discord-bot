@@ -97,4 +97,12 @@ JOIN ArmorSkill as a_s ON a_s.armor = a.id
 JOIN SkillTreeText AS st_t ON st_t.language = 1 AND a_s.skilltree = st_t.skillTree
 WHERE a.armorset = 1
 
+/*
+Retrieve locations related to a certain monster in a specific language
+*/
+SELECT 
+l.name AS "location"
+FROM monsterhabitat AS mh
+JOIN location AS l ON l.id = mh.location_id AND l.language = 1 
+WHERE mh.monster = 9
 

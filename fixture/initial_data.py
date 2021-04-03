@@ -2,28 +2,6 @@ from pony.orm import *
 from src.orm.models import *
 
 
-def guild():
-    
-    spanish = Language.select(lambda l: l.initials == 'esp').first()
-    
-    g = Guild(
-        id='807761997285818378',
-        prefix='?',
-        language=spanish
-    )
-    commit()
-
-def languages():
-    lang1 = Language(
-        name = 'Español',
-        initials='esp'
-    )
-    lang2 = Language(
-        name = 'English',
-        initials='eng'
-    )
-    commit()
-
 def common_errors_headers():
     '''
     Error messages related to command exceptions
@@ -1395,33 +1373,3 @@ def armor_command_headers():
         type= 'title',
         command = c_eng,
     )
-
-@db_session
-def populate_database():
-    print('III: 1/13 -> Inserting Available languages.')
-    languages()
-    print('III: 2/13 -> Inserting languages headers/titles.')
-    language_errors_headers()
-    print('III: 3/13 -> Inserting Default guild.')
-    guild()
-    print('III: 4/13 -> Inserting common headers/titles.')
-    common_errors_headers()
-    print('III: 5/13 -> Inserting help command arguments headers/titles.')
-    insert_help_commands_and_args()
-    print('III: 6/13 -> Inserting not found headers/titles.')
-    command_not_found_errors_headers()
-    print('III: 7/13 -> Inserting footer headers/titles.')
-    footers_headers()
-    print('III: 8/13 -> Inserting prefix command headers/titles.')
-    prefix_commands_and_headers()
-    print('III: 9/13 -> Inserting monster command headers/titles.')
-    monster_command_headers()
-    print('III: 10/13 -> Inserting item command headers/titles.')
-    item_command_headers()
-    print('III: 11/13 -> Inserting weapon command headers/titles')
-    weapon_command_headers()
-    print('III: 12/13 -> Inserting skill headers/titles.')
-    skill_command_headers()
-    print('III: 13/13 -> Inserting armor command headers/titles.')
-    print('III: Initial data done!!')
-    armor_command_headers()

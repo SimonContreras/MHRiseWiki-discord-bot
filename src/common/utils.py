@@ -176,6 +176,78 @@ def weapon_to_emoji(ctx, weapon: str):
     
     return e
 
+def status_or_element_to_emoji(ctx, se: list):
+    """ Retrieve custom emoji that represent a status or element
+
+        Parameters
+        ----------
+        ctx: commands.Context
+            context of server that create request
+        se: str
+            status or element to map
+
+        Returns
+        -------
+        str
+            Custom emoji of a status or element
+        """
+    s_e = {
+        #spanish
+        'nitro':'blast',
+        'sangrado':'bleed',
+        'burbujas':'bubbleblight',
+        'defensa baja':'defensedown',
+        'dragon':'dragonblight',
+        'hedor':'dung',
+        'fatiga':'fatigue',
+        'fuego':'fireblight',
+        '':'hellfireblight',
+        'hielo':'iceblight',
+        'barro':'mud',
+        'paralisis':'paralysis',
+        'veneno':'poison',
+        'sueño':'sleep',
+        'hombre de nieve':'snowman',
+        'aturdir':'stun',
+        'trueno':'thunderblight',
+        'agua':'waterblight',
+        'telaraña':'webbed',
+        
+        #english
+        'blast':'blast',
+        'bleed':'bleed',
+        'bubbleblight':'bubbleblight',
+        'defensedown':'defensedown',
+        'dragonblight':'dragonblight',
+        'dung':'dung',
+        'fatigue':'fatigue',
+        'fireblight':'fireblight',
+        'hellfireblight':'hellfireblight',
+        'iceblight':'iceblight',
+        'mud':'mud',
+        'paralysis':'paralysis',
+        'poison':'poison',
+        'sleep':'sleep',
+        'snowman':'snowman',
+        'stun':'stun',
+        'thunderblight':'thunderblight',
+        'waterblight':'waterblight',
+        'webbed':'webbed',
+
+    }
+    e = []
+    for s in se:
+        for emoji in ctx.guild.emojis:
+            if (s != '-') and (s_e[s] == emoji.name) and (emoji.is_usable()):
+                e .append(f'''<:{emoji.name}:{emoji.id}>''')
+                break
+    if len(e) >= 1:
+        join_char = ' '
+        return join_char.join(e)
+    else:
+        join_char = ', '
+        return join_char.join(se)
+
 def format_uppercase(s:str):
     words = s.split(' ')
     if len(words) == 2:

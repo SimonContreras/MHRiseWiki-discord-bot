@@ -82,7 +82,7 @@ class MonsterSerializer():
             'dragon':'dragon',
             'poison':'veneno',
             'sleep':'sueño',
-            'paralysis':'parálisis',
+            'paralysis':'paralisis',
             'blast':'nitro',
             'stun':'aturdir',
         }

@@ -61,7 +61,7 @@ class MonsterCog(commands.Cog):
         else:
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
             thumbnail_file = discord.File(self._monster_img_route+'icon/'+dct['img-url'], filename=dct['img-url'])
-            embed = MonsterEmbed(dct, headers)
+            embed = MonsterEmbed(ctx, dct, headers)
             page1, page2 = embed.main()
                        
             if page2 is None:
@@ -121,7 +121,7 @@ class MonsterCog(commands.Cog):
 
         else:
             headers = {}
-            embed = MonsterEmbed(dct,headers)
+            embed = MonsterEmbed(ctx, dct, headers)
             embed_hzv = embed.hzv()
             hzv_file = discord.File(self._monster_img_route+'hzv/'+dct['img-url'], filename=dct['img-url'])
             await ctx.send(embed=embed_hzv, file=hzv_file)
@@ -151,7 +151,7 @@ class MonsterCog(commands.Cog):
 
         else:
             headers = {}
-            embed = MonsterEmbed(dct,headers)
+            embed = MonsterEmbed(ctx, dct, headers)
             embed_hzv = embed.drops()
             sub_path = self.__drops_path(rank, dct['language'])
             hzv_file = discord.File(self._monster_img_route+sub_path+dct['img-url'], filename=dct['img-url'])

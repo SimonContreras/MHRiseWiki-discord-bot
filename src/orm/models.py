@@ -1,6 +1,7 @@
 import os
 from pony.orm import *
 from dotenv import load_dotenv
+from pony.orm.core import safe_repr
 load_dotenv()
 
 db = Database()
@@ -76,12 +77,13 @@ MH RISE Entitites and relations
 '''
 class Item(db.Entity):
     id = PrimaryKey(int, auto=True)
-    category = Optional(str)
-    rarity = Optional(int)
-    buy_price = Optional(int)
-    sell_price = Optional(int)
-    carry_limit = Optional(int)
-    craftable = Required(bool)
+    rarity = Required(int, default=0)
+    buy_price = Required(int, default=0)
+    sell_price = Required(int, default=0)
+    carry_limit = Required(int, default=0)
+    craftable = Required(bool, default=False)
+    points = Required(int, default=0)
+    icon = Required(str, default='unknown.png')
 
 
     translations = Set('ItemText')
@@ -96,7 +98,9 @@ class Item(db.Entity):
 class ItemText(db.Entity):
     language = Required(Language)
     name = Required(str)
-    description = Required(str)
+    category=Required(str, default='other')
+    description = Required(str, default='-')
+    obtain_info = Required(str, default='-')
     item = Required(Item)
     PrimaryKey(item, language)
 

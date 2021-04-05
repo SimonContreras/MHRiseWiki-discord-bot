@@ -141,6 +141,59 @@ def load_monsters_habitats(filename):
                     rest_area=int(r[5]),
                 )
             commit()
+
+
+@db_session
+def load_items(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            mt = Item(
+                id=int(r[0]),
+                rarity=int(r[1]),
+                buy_price=int(r[2]),
+                sell_price=int(r[3]),
+                carry_limit=int(r[4]),
+                craftable=str_to_bool(r[5]),
+                points=int(r[6]),
+                icon=r[7]
+            )
+            commit()
+
+@db_session
+def load_item_combination(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            mt = ItemCombination(
+                id=int(r[0]),
+                first=int(r[1]),
+                second=int(r[2]),
+                result=int(r[3]),
+                quantity_first=int(r[4]),
+                quantity_second=int(r[5]),
+                quantity_result=int(r[6])
+            )
+            commit()
+
+@db_session
+def load_item_text(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            mt = ItemText(
+                language=int(r[1]),
+                name=r[2],
+                category=r[3],
+                description=r[4],
+                obtain_info=r[5],
+                item=int(r[0])
+            )
+            commit()
+
 @db_session
 def load_guild():
     g1 = Guild(

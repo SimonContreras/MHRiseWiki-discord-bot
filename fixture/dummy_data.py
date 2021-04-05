@@ -148,6 +148,7 @@ def dummy_monster():
         monster=m,
         name='alatreon',
         species='elder dragon',
+        hzv_img='great-izuchi.png',
         description='Known as a symbol of destruction, it\'s rumored to harness the full force of nature, but no records remain. ',
         alt_state_description = 'enraged mode'
     )
@@ -157,6 +158,7 @@ def dummy_monster():
         monster=m,
         name='alatreon',
         species='Dragon Anciano',
+        hzv_img='great-izuchi.png',
         description='Un símbolo de destrucción. Se dice que puede controlar a toda la naturaleza, pero no hay registros sobre ello. ',
         alt_state_description = 'modo furia'
     )

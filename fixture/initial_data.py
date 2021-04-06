@@ -860,15 +860,15 @@ def item_command_headers():
     )
     h2_esp = Header(
         id = 65,
-        name = 'price',
-        translation = 'Valor',
+        name = 'buy',
+        translation = 'Comprar',
         type= 'title',
         command = c_esp,
     )
     h2_eng = Header(
         id = 66,
-        name = 'price',
-        translation = 'Price',
+        name = 'buy',
+        translation = 'Buy',
         type= 'title',
         command = c_eng,
     )
@@ -1408,6 +1408,55 @@ def armor_command_headers():
         id = 140,
         name = 'craft-mats',
         translation = 'Crafting Materials',
+        type= 'title',
+        command = c_eng,
+    )
+
+def more_item_headers():
+    spanish = Language.select(lambda l: l.initials == 'esp').first()
+    english = Language.select(lambda l: l.initials == 'eng').first()
+    c_esp = Command.select(lambda c: (c.language == spanish and c.name == 'item')).first()
+    c_eng = Command.select(lambda c: (c.language == english and c.name == 'item')).first()
+
+    h2_esp = Header(
+        id = 141,
+        name = 'sell',
+        translation = 'Vender',
+        type= 'title',
+        command = c_esp,
+    )
+    h2_eng = Header(
+        id = 142,
+        name = 'sell',
+        translation = 'Sell',
+        type= 'title',
+        command = c_eng,
+    )
+    h3_esp = Header(
+        id = 143,
+        name = 'category',
+        translation = 'Categoría',
+        type= 'title',
+        command = c_esp,
+    )
+    h3_eng = Header(
+        id = 144,
+        name = 'category',
+        translation = 'Category',
+        type= 'title',
+        command = c_eng,
+    )
+    h4_esp = Header(
+        id = 145,
+        name = 'location',
+        translation = 'Obtenible en',
+        type= 'title',
+        command = c_esp,
+    )
+    h4_eng = Header(
+        id = 146,
+        name = 'location',
+        translation = 'Obtainable in',
         type= 'title',
         command = c_eng,
     )

@@ -42,6 +42,7 @@ def populate_database():
     
     print('III: Initial data done!!')
     armor_command_headers()
+    more_item_headers()
 
 if __name__ == "__main__":
     print('I: -> Creating tables...')

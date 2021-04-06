@@ -2,25 +2,24 @@
 Retrieves info for Item embed
 */
 SELECT 
-it.name AS 'name',
-it.description AS 'description', 
-i.category AS 'category', 
-i.subcategory AS 'subcategory', 
-i.rarity AS 'rarity', 
-i.buy_price AS 'buy_price', 
-i.sell_price AS 'sell_price', 
-i.carry_limit AS 'carry_limit', 
-i.craftable AS 'craftable', 
-i.points AS 'points', 
-i.icon_name AS 'icon_name', 
-i.icon_color AS 'icon_color',
-ic.quantity_first AS 'quantity_first', 
-ic.quantity_second AS 'quantity_second', 
-ic.quantity_result AS 'quantity_result',
-it2.name AS 'first_name',
-it3.name AS 'second_name'
+it.name AS "name",
+it.description AS "description", 
+it.category AS "category", 
+i.rarity AS "rarity", 
+i.buy_price AS "buy_price", 
+i.sell_price AS "sell_price", 
+i.carry_limit AS "carry_limit", 
+i.craftable AS "craftable", 
+i.points AS "points", 
+i.icon AS "icon", 
+
+ic.quantity_first AS "quantity_first", 
+ic.quantity_second AS "quantity_second", 
+ic.quantity_result AS "quantity_result",
+it2.name AS "first_name",
+it3.name AS "second_name"
 FROM ItemText AS it
-JOIN Item AS i ON i.id = it.item  AND it.language = 1 AND it.name = 'pocion' 
+JOIN Item AS i ON i.id = it.item  AND it.language = 1 AND it.name LIKE 'pocioan%'
 LEFT JOIN ItemCombination ic ON ic.result = i.id
 LEFT JOIN ItemText it2 ON it2.item = ic.first AND it2.language = 1
 LEFT JOIN ItemText it3 ON it3.item = ic.second AND it3.language = 1

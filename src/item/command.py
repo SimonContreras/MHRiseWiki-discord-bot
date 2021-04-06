@@ -1,3 +1,5 @@
+import os
+import discord
 from discord.ext import commands
 from src.common.utils import InputParser
 from src.item.embed import ItemEmbed
@@ -27,6 +29,7 @@ class ItemCog(commands.Cog):
         self.description = '''Items commands MH Rise Wiki'''
         self.__dbItem = db_item
         self.__dbHeader = db_header
+        self._item_img_route = os.getenv('ITEM_IMG_ROUTE')
 
     @commands.command(name='item')
     async def item(self, ctx: commands.Context, *args):
@@ -54,8 +57,9 @@ class ItemCog(commands.Cog):
 
         else:
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
+            thumbnail_file = discord.File(self._item_img_route+dct['icon'], filename=dct['icon'])
             embed = ItemEmbed(dct, headers)
             embed_main = embed.main()
-            await ctx.send(embed=embed_main)
+            await ctx.send(embed=embed_main, file=thumbnail_file)
     
     

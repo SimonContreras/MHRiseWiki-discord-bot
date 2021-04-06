@@ -74,6 +74,7 @@ def color_by_rarity(rarity: int):
             Discord color related to a certain rarity
         """
     color = {
+        0: discord.Color.from_rgb(224, 224, 224),
         1: discord.Color.from_rgb(224, 224, 224),
         2: discord.Color.from_rgb(255,255,255),
         3: discord.Color.from_rgb(128, 255, 0),
@@ -254,6 +255,8 @@ def format_uppercase(s:str):
         return f'''{words[0].capitalize()} {words[1].capitalize()}'''
     elif len(words) == 3:
         return f'''{words[0].capitalize()} {words[1]} {words[2].capitalize()}'''
+    elif len(words) == 4:
+        return f'''{words[0].capitalize()} {words[1]} {words[2]} {words[3]}'''
     else:
         return words[0].capitalize()
 

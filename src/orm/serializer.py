@@ -10,10 +10,13 @@ class ItemSerializer():
             'name': self.query.name,
             'rarity': self.query.rarity,
             'description': self.query.description,
-            'price': self.query.buy_price,
+            'buy': self.query.buy_price,
+            'sell': self.query.sell_price,
             'craftable': self.query.craftable,
             'product': self.query.quantity_result,
             'max': self.query.carry_limit,
+            'category':self.query.category,
+            'icon':self.query.icon,
             'recipe': {
                 'product': self.query.quantity_result,
                 'items': [

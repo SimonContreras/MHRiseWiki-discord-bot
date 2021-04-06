@@ -1,5 +1,6 @@
 import discord
 import datetime
+from src.common.utils import format_uppercase, color_by_rarity
 
 class ItemEmbed(discord.Embed):
     """
@@ -20,8 +21,8 @@ class ItemEmbed(discord.Embed):
 
     """
     def __init__(self, dct: dict, headers: dict):
-        self.__dct = dct
-        self.__h = headers
+        self._dct = dct
+        self._h = headers
 
     def main(self):
         """ Retrieve embed with Item information formatted:
@@ -35,17 +36,26 @@ class ItemEmbed(discord.Embed):
         Embed
             retrieve embed with 'not found' info
         """
-        embed= discord.Embed(title=self.__dct['name'], description=self.__dct['description'], color=discord.Color.blue())
-        embed.add_field(name=self.__h['rarity'], value=self.__dct['rarity'], inline=True)
-        embed.add_field(name=self.__h['price'], value=str(self.__dct['price']), inline=True)
-        embed.add_field(name=self.__h['max-carry'], value=str(self.__dct['max']), inline=True)
-       
-        if self.__dct['craftable']:
-            text_recipe = f''' **{self.__dct['recipe']['items'][0]['name']}** ({self.__dct['recipe']['items'][0]['quantity']})  + \
-                **{self.__dct['recipe']['items'][1]['name']}** ({self.__dct['recipe']['items'][1]['quantity']}) = **{self.__dct['name']}** \
-                ({self.__dct['recipe']['product']})''' 
-            embed.add_field(name=self.__h['combination'], value=text_recipe, inline=False)
+        embed= discord.Embed(title=format_uppercase(self._dct['name']), description=self._dct['description'], color=color_by_rarity(self._dct['rarity']))
+        embed.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
+        embed.add_field(name=self._h['category'], value=format_uppercase(self._dct['category']), inline=True)
+        embed.add_field(name=self._h['rarity'], value=self._dct['rarity'], inline=True)
+        embed.add_field(name=self._h['buy'], value=str(self._dct['buy'])+'z', inline=True)
+        embed.add_field(name=self._h['sell'], value=str(self._dct['sell'])+'z', inline=True)
+        embed.add_field(name=self._h['max-carry'], value=str(self._dct['max']), inline=True)
+        
+        if self._dct['craftable']:
+            if self._dct['recipe']['items'][1]['quantity'] == 0:
+                text_recipe = f''' **{self._dct['recipe']['items'][0]['name']}** ({self._dct['recipe']['items'][0]['quantity']})\
+                      =   **{self._dct['name']}** ({self._dct['recipe']['product']})''' 
+            else:
+                text_recipe = f''' **{self._dct['recipe']['items'][0]['name']}** ({self._dct['recipe']['items'][0]['quantity']})  + \
+                **{self._dct['recipe']['items'][1]['name']}** ({self._dct['recipe']['items'][1]['quantity']}) = **{self._dct['name']}** \
+                ({self._dct['recipe']['product']})''' 
+            embed.add_field(name=self._h['combination'], value=text_recipe, inline=False)
+
+        embed.add_field(name=self._h['location'], value='-', inline=False)
 
         embed.timestamp = datetime.datetime.now()
-        embed.set_footer(text=self.__dct['name'])
+        embed.set_footer(text=format_uppercase(self._dct['name']))
         return embed

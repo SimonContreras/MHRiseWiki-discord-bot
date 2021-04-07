@@ -12,6 +12,7 @@ from src.item.command import ItemCog
 from src.skill.command import SkillCog
 from src.weapon.command import WeaponCog
 from src.language.command import LanguageCog
+from src.tip.command import TipCog
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 
@@ -36,6 +37,7 @@ def setup():
     bot.add_cog(SkillCog(bot))
     bot.add_cog(WeaponCog(bot))
     bot.add_cog(LanguageCog(bot))
+    bot.add_cog(TipCog(bot))
 
     return bot
 

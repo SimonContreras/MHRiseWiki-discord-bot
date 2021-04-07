@@ -1,5 +1,16 @@
 from src.orm.models import Weapon, WeaponAmmo, WeaponText
 
+class TipSerializer():
+
+    def __init__(self, query):
+        self._query = query
+
+    def serialize_list(self):
+        main_dct = {'tips': []}
+        for r in self._query:
+            main_dct['tips'].append({ 'name': r.name })
+        return main_dct
+        
 class ItemSerializer():
 
     def __init__(self, query, locations):

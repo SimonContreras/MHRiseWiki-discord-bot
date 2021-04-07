@@ -1,3 +1,4 @@
+from enum import unique
 import os
 from pony.orm import *
 from dotenv import load_dotenv
@@ -10,7 +11,14 @@ db.bind(provider=os.getenv('PROVIDER_DB'),
         host=os.getenv('HOST_DB'),
         port=os.getenv('PORT_DB'),
         database=os.getenv('DATABASE_NAME'))
-        
+
+'''
+Miscelaneous 
+'''
+class Tip(db.Entity):
+    name = PrimaryKey(str)
+    link = Required(str, unique=True)
+
 '''
 Discord and management entities and relations
 '''

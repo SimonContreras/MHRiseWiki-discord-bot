@@ -36,6 +36,7 @@ class ItemEmbed(discord.Embed):
         Embed
             retrieve embed with 'not found' info
         """
+        maps_embeds = []
         embed= discord.Embed(title=format_uppercase(self._dct['name']), description=self._dct['description'], color=color_by_rarity(self._dct['rarity']))
         embed.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
         embed.add_field(name=self._h['category'], value=format_uppercase(self._dct['category']), inline=True)
@@ -54,8 +55,26 @@ class ItemEmbed(discord.Embed):
                 ({self._dct['recipe']['product']})''' 
             embed.add_field(name=self._h['combination'], value=text_recipe, inline=False)
 
-        embed.add_field(name=self._h['location'], value='-', inline=False)
+        if len(self._dct['locations']) >= 1:
+            l_text = ''
+            ls = []
+            for l in self._dct['locations']:
+                area = 'Ver mapa' if l['area'] == '0' else l['area']
+                if l['name'] not in ls:
+                    l_text += f'''**{format_uppercase(l['name'])}:** | **zonas:** {area} | **rango:**{l['rank']} \n'''
+                    ls.append(l['name'])
+                if l['map-available']:
+                    e = discord.Embed(title=format_uppercase(l['name']), color=color_by_rarity(self._dct['rarity']))
+                    e.set_image(url=f'''attachment://{l['map-img']}''')
+                    d = {
+                        'map-img': l['map-img'],
+                        'embed': e,
+                        }
+                    maps_embeds.append(d)
 
+
+            embed.add_field(name=self._h['location']+':', value=l_text, inline=False) 
         embed.timestamp = datetime.datetime.now()
         embed.set_footer(text=format_uppercase(self._dct['name']))
-        return embed
+
+        return embed, maps_embeds

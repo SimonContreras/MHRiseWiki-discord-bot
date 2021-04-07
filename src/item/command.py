@@ -30,6 +30,7 @@ class ItemCog(commands.Cog):
         self.__dbItem = db_item
         self.__dbHeader = db_header
         self._item_img_route = os.getenv('ITEM_IMG_ROUTE')
+        self._map_img_route = os.getenv('ITEM_LOCATION_ROUTE')
 
     @commands.command(name='item')
     async def item(self, ctx: commands.Context, *args):
@@ -59,7 +60,54 @@ class ItemCog(commands.Cog):
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
             thumbnail_file = discord.File(self._item_img_route+dct['icon'], filename=dct['icon'])
             embed = ItemEmbed(dct, headers)
-            embed_main = embed.main()
-            await ctx.send(embed=embed_main, file=thumbnail_file)
+            embed_main, maps_embeds = embed.main()
+
+            if len(maps_embeds) == 0:
+                await ctx.send(embed = embed_main, file=thumbnail_file)
+            else:
+                
+                message = await ctx.send(embed = embed_main, file=thumbnail_file)
+                await message.add_reaction('⏮')
+                await message.add_reaction('◀')
+                await message.add_reaction('▶')
+                await message.add_reaction('⏭')
+                await message.add_reaction('⏹')
+                
+                def check(reaction, user):
+                    return user == ctx.author
+
+                i = 0
+                reaction = None
+
+                while True:
+                    if str(reaction) == '⏮':
+                        i = 0
+                        map_file = discord.File(self._item_img_route+dct['map-img'], filename=dct['map-img'])
+                        await ctx.send(embed=maps_embeds[i], file=map_file)
+                    elif str(reaction) == '◀':
+                        if i > 0:
+                            i -= 1
+                            map_file = discord.File(self._item_img_route+dct['map-img'], filename=dct['map-img'])
+                            await ctx.send(embed=maps_embeds[i], file=map_file)
+                    elif str(reaction) == '▶':
+                        if i < 1:
+                            i += 1
+                            map_file = discord.File(self._map_img_route+maps_embeds[i]['map-img'], 
+                                                    filename=maps_embeds[i]['map-img'])
+                            await ctx.send(embed=maps_embeds[i]['embed'], file=map_file)
+                    elif str(reaction) == '⏭':
+                        i = len(maps_embeds)-1
+                        map_file = discord.File(self._map_img_route+dct['map-img'], filename=maps_embeds[i]['map-img'])
+                        await ctx.send(embed=maps_embeds[i], file=map_file)
+                    elif str(reaction) == '⏹':
+                            break
+                    
+                    try:
+                        reaction, user = await self._bot.wait_for(event='reaction_add', timeout = 30.0, check = check)
+                        await message.remove_reaction(reaction, user)
+                    except:
+                        break
+
+                await message.clear_reactions()
     
     

@@ -75,9 +75,11 @@ class ItemCog(commands.Cog):
                     return user == ctx.author
 
                 reaction = None
+                reaction_used = []
                 while True:
-                    if str(reaction) in valid_reactions:
+                    if str(reaction) in valid_reactions and str(reaction) not in reaction_used:
                         i = emoji_to_number(str(reaction))
+                        reaction_used.append(str(reaction))
                         map_file = discord.File(self._map_img_route+maps_embeds[i-1]['map-img'], 
                                                 filename=maps_embeds[i-1]['map-img'])
                         await ctx.send(embed=maps_embeds[i-1]['embed'], file=map_file)

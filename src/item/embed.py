@@ -71,7 +71,7 @@ class ItemEmbed(discord.Embed):
                 if l['map-available']:
                     e = discord.Embed(title=num_to_emoji(n)+format_uppercase(l['name']), color=color_by_rarity(self._dct['rarity']))
                     m_text = f'''**{self._h['zones']}:** {area} | **{self._h['rank']}:**{l['rank']}'''
-                    e.add_field(name='Información mapa', value=m_text, inline=False) 
+                    e.add_field(name=self._h['map-information'], value=m_text, inline=False) 
                     e.set_image(url=f'''attachment://{l['map-img']}''')
                     d = {
                         'map-img': l['map-img'],

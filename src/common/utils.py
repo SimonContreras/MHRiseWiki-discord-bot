@@ -294,3 +294,31 @@ def emoji_to_number(e):
                         '🔟':10
                         }
     return emoji_to_number[e]
+
+def item_to_emoji(ctx, item: str):
+    """ Retrieve custom emoji that represent an item
+
+        Parameters
+        ----------
+        ctx: commands.Context
+            context of server that create request
+        weapon: str
+            item to map
+
+        Returns
+        -------
+        str
+            Custom emoji of an item
+        """
+    i = {
+            'pitfall_trap': 'pitfalltrap',
+            'shock_trap': 'shocktrap'
+    }
+
+    e = ' '
+    for emoji in ctx.guild.emojis:
+        if (i[item] == emoji.name) and (emoji.is_usable()):
+            e = f'''<:{emoji.name}:{emoji.id}>'''
+            break
+    
+    return e

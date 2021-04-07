@@ -150,6 +150,14 @@ class MonsterSerializer():
         alt_weaknesses_1 = []
         alt_weaknesses_2 = []
         alt_weaknesses_3 = []
+        plague_0 = []
+        plague_1 = []
+        plague_2 = []
+        plague_3 = []
+        alt_plague_0 = []
+        alt_plague_1 = []
+        alt_plague_2 = []
+        alt_plague_3 = []
         for w in m_stat:
             key = w.split('_')
             if len(key) > 1:
@@ -166,7 +174,7 @@ class MonsterSerializer():
                             weaknesses_2.append(translation)
                         elif m_stat[w] == 3:
                             weaknesses_3.append(translation)
-                    elif key[0] == 'alt':
+                    elif key[0] == 'alt' and key[1] == 'weakness':
                         if m_stat[w] == 0:
                             alt_weaknesses_0.append(translation)
                         elif m_stat[w] == 1:
@@ -175,6 +183,24 @@ class MonsterSerializer():
                             alt_weaknesses_2.append(translation)
                         elif m_stat[w] == 3:
                             alt_weaknesses_3.append(translation)
+                    elif key[0] == 'plague':
+                        if m_stat[w] == 0:
+                            plague_0.append(translation)
+                        elif m_stat[w] == 1:
+                            plague_1.append(translation)
+                        elif m_stat[w] == 2:
+                            plague_2.append(translation)
+                        elif m_stat[w] == 3:
+                            plague_3.append(translation)
+                    elif key[0] == 'alt' and key[1] == 'plague':
+                        if m_stat[w] == 0:
+                            alt_plague_0.append(translation)
+                        elif m_stat[w] == 1:
+                            alt_plague_1.append(translation)
+                        elif m_stat[w] == 2:
+                            alt_plague_2.append(translation)
+                        elif m_stat[w] == 3:
+                            alt_plague_3.append(translation)
         
         weaknesses_0 = '-' if ((type(weaknesses_0) == list) and (len(weaknesses_0) == 0)) else weaknesses_0
         weaknesses_1 = '-' if ((type(weaknesses_1) == list) and (len(weaknesses_1) == 0)) else weaknesses_1
@@ -185,9 +211,18 @@ class MonsterSerializer():
         alt_weaknesses_1 = '-' if ((type(alt_weaknesses_1) == list) and (len(alt_weaknesses_1) == 0)) else alt_weaknesses_1
         alt_weaknesses_2 = '-' if ((type(alt_weaknesses_2) == list) and (len(alt_weaknesses_2) == 0)) else alt_weaknesses_2
         alt_weaknesses_3 = '-' if ((type(alt_weaknesses_3) == list) and (len(alt_weaknesses_3) == 0)) else alt_weaknesses_3
+        plague_0 = '-' if ((type(plague_0) == list) and (len(plague_0) == 0)) else plague_0
+        plague_1 = '-' if ((type(plague_1) == list) and (len(plague_1) == 0)) else plague_1
+        plague_2 = '-' if ((type(plague_2) == list) and (len(plague_2) == 0)) else plague_2
+        plague_3 = '-' if ((type(plague_3) == list) and (len(plague_3) == 0)) else plague_3
+        alt_plague_0 = '-' if ((type(alt_plague_0) == list) and (len(alt_plague_0) == 0)) else alt_plague_0
+        alt_plague_1 = '-' if ((type(alt_plague_1) == list) and (len(alt_plague_1) == 0)) else alt_plague_1
+        alt_plague_2 = '-' if ((type(alt_plague_2) == list) and (len(alt_plague_2) == 0)) else alt_plague_2
+        alt_plague_3 = '-' if ((type(alt_plague_3) == list) and (len(alt_plague_3) == 0)) else alt_plague_3
         
         return weaknesses_0, weaknesses_1, weaknesses_2, weaknesses_3, \
-            alt_weaknesses_0, alt_weaknesses_1, alt_weaknesses_2, alt_weaknesses_3, ailments
+            alt_weaknesses_0, alt_weaknesses_1, alt_weaknesses_2, alt_weaknesses_3, ailments, \
+            plague_0, plague_1, plague_2, plague_3, alt_plague_0, alt_plague_1, alt_plague_2, alt_plague_3
 
     def _format_locations(self):
         if len(self._h) >= 1:
@@ -205,11 +240,15 @@ class MonsterSerializer():
         
     def serialize(self):
         w_0, w_1, w_2, w_3, \
-            alt_0, alt_1, alt_2, alt_3, a = self._format_stats()
+            alt_0, alt_1, alt_2, alt_3, a, \
+            p_0, p_1, p_2, p_3, alt_p_0, alt_p_1, alt_p_2, alt_p_3 = self._format_stats()
         main_dct = {
             'name': self._m[0].name,
             'species': self._m[0].species,
             'description':self._m[0].description,
+            'danger_level':self._m[1].danger_level,
+            'pitfall_trap': self._m[1].pitfall_trap,
+            'shock_trap':self._m[1].shock_trap,
             'img-url': self._m[1].icon,
             'ailments': a,
             'inmune': w_0,
@@ -222,6 +261,14 @@ class MonsterSerializer():
             'alt-weakness-3': alt_3,
             'alt-weakness-2': alt_2,
             'alt-weakness-1': alt_1,
+            'plague_0':p_0,
+            'plague_1':p_1,
+            'plague_2':p_2,
+            'plague_3':p_3,
+            'alt_plague_0':alt_p_0,
+            'alt_plague_1':alt_p_1,
+            'alt_plague_2':alt_p_2,
+            'alt_plague_3':alt_p_3,
             'locations': self._format_locations(),
             'breakable': self._format_breakables(),
         }

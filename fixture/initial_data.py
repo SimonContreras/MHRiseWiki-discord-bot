@@ -313,6 +313,7 @@ def insert_help_commands_and_args():
         language = spanish,
         name = 'item',
         title = 'Información del item',
+        active = True,
         description = 'Lista información del item.'
     )
 
@@ -320,6 +321,7 @@ def insert_help_commands_and_args():
         language = english,
         name = 'item',
         title = 'Item information',
+        active = True,
         description = 'List item information.'
     )
 

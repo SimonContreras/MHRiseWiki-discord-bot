@@ -1,7 +1,6 @@
 import os
 from pony.orm import *
 from dotenv import load_dotenv
-from pony.orm.core import safe_repr
 load_dotenv()
 
 db = Database()

@@ -160,7 +160,9 @@ To get a local copy up and running follow these simple steps.
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-**Invite Link**: https://discord.com/api/oauth2/authorize?client_id=807761086677385266&permissions=1074192448&scope=bot
+
+**Invite Link**: [Discord Bot Invite](https://discord.com/api/oauth2/authorize?client_id=807761086677385266&permissions=1074192448&scope=bot)
+
 There are two types of scopes for commands, ***anyone*** and ***admin***. ***Anyone*** commands are related directly to the wiki itself, meanwhile ***admin*** commands are related to prefix and language management.
 ### Commands available to anyone:
 * **?ayuda**
@@ -175,6 +177,10 @@ There are two types of scopes for commands, ***anyone*** and ***admin***. ***Any
   * Muestra información de la habilidad.
 * **?arma [nombre-arma]**
   * Muestra información detallada del arma.
+* **?hitzones [nombre-monstruo]**
+  * Lista información numérica detallada del monstruo.
+* **?mats [nombre-monstruo] [rango]**
+  * Muestra materiales que da como recompensa un monstruo en un rango específico (alto/bajo).
 
 ### Commands available to admins:
 
@@ -225,5 +231,3 @@ Project Link: [https://github.com/SimonContreras/MHRiseWiki-discord-bot](https:/
 ## Acknowledgements
 Thanks to:
 * [Gatheringhallstudios](https://github.com/gatheringhallstudios) , Relational model based in [MHWorldData](https://github.com/gatheringhallstudios/MHWorldData) and ported to Pony ORM
-
-

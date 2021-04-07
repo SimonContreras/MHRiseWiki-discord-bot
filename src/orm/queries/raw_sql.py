@@ -2,6 +2,7 @@ info_item_sql = '''SELECT
                     it.name AS "name",
                     it.description AS "description", 
                     it.category AS "category", 
+                    it.obtain_info as "obtain_info",
                     i.id AS "id",
                     i.rarity AS "rarity", 
                     i.buy_price AS "buy_price", 

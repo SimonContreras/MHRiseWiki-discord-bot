@@ -71,9 +71,10 @@ class ItemEmbed(discord.Embed):
                         'embed': e,
                         }
                     maps_embeds.append(d)
+        else:
+            l_text = f'''{self._dct['obtain_info']}'''
 
-
-            embed.add_field(name=self._h['location']+':', value=l_text, inline=False) 
+        embed.add_field(name=self._h['location']+':', value=l_text, inline=False) 
         embed.timestamp = datetime.datetime.now()
         embed.set_footer(text=format_uppercase(self._dct['name']))
 

@@ -33,6 +33,7 @@ class ItemSerializer():
             'max': self.query.carry_limit,
             'category':self.query.category,
             'icon':self.query.icon,
+            'obtain_info': self.query.obtain_info,
             'recipe': {
                 'product': self.query.quantity_result,
                 'items': [

@@ -2,10 +2,26 @@ from src.orm.models import Weapon, WeaponAmmo, WeaponText
 
 class ItemSerializer():
 
-    def __init__(self, query):
+    def __init__(self, query, locations):
         self.query = query
+        self.locations = locations
     
+    def _format_locations(self):
+        locations = []
+        if len(self.locations) >= 1:
+            for l in self.locations:
+                dct = {
+                    'name': l.location,
+                    'area': l.area,
+                    'rank': l.rank,
+                    'map-available':l.map_available,
+                    'map-img': l.map_img
+                }
+                locations.append(dct)
+        return locations
+
     def serialize(self):
+        locations = self._format_locations()
         main_dct = {
             'name': self.query.name,
             'rarity': self.query.rarity,
@@ -29,7 +45,8 @@ class ItemSerializer():
                         'quantity': self.query.quantity_second
                     }
                 ]
-            }
+            },
+            'locations':locations
         }
         return main_dct
 

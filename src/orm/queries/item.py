@@ -1,7 +1,7 @@
 from pony import orm
 from src.orm.models import Guild, db
 from src.orm.serializer import ItemSerializer
-from src.orm.queries.raw_sql import info_item_sql
+from src.orm.queries.raw_sql import info_item_sql, location_item_sql
 
 class dbItem():
 
@@ -14,7 +14,11 @@ class dbItem():
         query = self.__db.select(info_item_sql)
         if len(query) < 1:
             return None
-        return ItemSerializer(query[0]).serialize()
+        
+        item_id = query[0].id
+        locations = self.__db.select(location_item_sql)
+
+        return ItemSerializer(query[0], locations).serialize()
     
 db_item = dbItem()
 

@@ -2,6 +2,7 @@ info_item_sql = '''SELECT
                     it.name AS "name",
                     it.description AS "description", 
                     it.category AS "category", 
+                    i.id AS "id",
                     i.rarity AS "rarity", 
                     i.buy_price AS "buy_price", 
                     i.sell_price AS "sell_price", 
@@ -66,3 +67,13 @@ habitats_sql = '''SELECT
                         FROM monsterhabitat AS mh
                         JOIN location AS l ON l.id = mh.location_id AND l.language = $guild_lang
                         WHERE mh.monster = $monster_id'''
+
+location_item_sql = '''SELECT 
+                            li.area as "area",
+                            li.rank as "rank",
+                            li.map_available as "map_available",
+                            li.map_img as "map_img",
+                            l.name as "location"
+                            FROM locationitem AS li
+                            JOIN location AS l ON l.id = li.location_id  AND l.language = $guild_lang
+                            WHERE li.item = $item_id AND li.location_language = $guild_lang'''

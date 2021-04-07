@@ -140,11 +140,14 @@ class LocationItem(db.Entity):
     # therefore, this join-table has no "real id" and uses a surrogate instead
     id = PrimaryKey(int, auto=True)
     location = Required(Location)
-    area = Required(int)
+    area = Required(str, default='0')
     rank = Required(str)
     item = Required(Item)
-    stack = Required(int)
-    percentage = Required(int)
+    stack = Required(int, default=0)
+    percentage = Required(int, default=0)
+    map_available = Required(bool, default=False)
+    map_img = Required(str, default='-')
+
 
 class LocationCamp(db.Entity):
     """Defines a location camp and a name entry. 

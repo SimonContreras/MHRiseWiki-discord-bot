@@ -1,6 +1,6 @@
 import discord
 import datetime
-from src.common.utils import format_uppercase, color_by_rarity
+from src.common.utils import format_uppercase, color_by_rarity, num_to_emoji
 
 class ItemEmbed(discord.Embed):
     """
@@ -57,12 +57,16 @@ class ItemEmbed(discord.Embed):
 
         if len(self._dct['locations']) >= 1:
             l_text = ''
-            ls = []
+            n = 0
+            last_name = ''
             for l in self._dct['locations']:
+                n+= 1
                 area = 'Ver mapa' if l['area'] == '0' else l['area']
-                if l['name'] not in ls:
-                    l_text += f'''**{format_uppercase(l['name'])}:** | **zonas:** {area} | **rango:**{l['rank']} \n'''
-                    ls.append(l['name'])
+                if l['name'] != last_name:
+                    l_text += f'''{num_to_emoji(n)} | **{format_uppercase(l['name'])}:** | **zonas:** {area} | **rango:**{l['rank']} \n'''
+                    last_name = l['name']
+                else:
+                    l_text = l_text.replace(f'''{num_to_emoji(n-1)}''',f'''{num_to_emoji(n-1)}-{num_to_emoji(n)}''' )
                 if l['map-available']:
                     e = discord.Embed(title=format_uppercase(l['name']), color=color_by_rarity(self._dct['rarity']))
                     e.set_image(url=f'''attachment://{l['map-img']}''')

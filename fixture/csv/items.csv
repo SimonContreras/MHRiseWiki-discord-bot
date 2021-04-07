@@ -207,7 +207,7 @@
 568,4,0,3,80,TRUE,0,gunpowderlv3.png
 570,2,0,21,5,FALSE,0,unknown.png
 571,2,0,54,10,TRUE,0,net.png
-572,5,0,3600,1,FASE,0,demonpowder.png
+572,5,0,3600,1,FALSE,0,demonpowder.png
 573,6,0,6840,1,TRUE,0,unknown.png
 574,4,0,300,99,FALSE,0,unknown.png
 575,1,0,8,10,FALSE,0,unknown.png
@@ -264,7 +264,7 @@
 629,0,0,0,99,FALSE,0,seed.png
 630,0,0,0,99,FALSE,0,seed.png
 631,0,0,0,99,FALSE,0,seed.png
-632,2,0,6,10,TRUE,0,drink.png
+632,2,0,6,10,TRUE,0,energydrink.png
 633,3,0,0,10,TRUE,0,unknown.png
 634,3,0,0,3,TRUE,0,unknown.png
 635,3,0,0,3,TRUE,0,unknown.png

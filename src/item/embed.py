@@ -61,7 +61,7 @@ class ItemEmbed(discord.Embed):
             last_name = ''
             for l in self._dct['locations']:
                 n+= 1
-                area = 'Ver mapa' if l['area'] == '0' else l['area']
+                area = 'Ver mapa' if l['area'] == '0' else l['area'].replace(';', ',')
                 if l['name'] != last_name:
                     l_text += f'''{num_to_emoji(n)} | **{format_uppercase(l['name'])}:** | **{self._h['zones']}:**  \
                                 {area} | **{self._h['rank']}:**{l['rank']} \n'''
@@ -69,7 +69,9 @@ class ItemEmbed(discord.Embed):
                 else:
                     l_text = l_text.replace(f'''{num_to_emoji(n-1)}''',f'''{num_to_emoji(n-1)}-{num_to_emoji(n)}''' )
                 if l['map-available']:
-                    e = discord.Embed(title=format_uppercase(l['name'] + num_to_emoji(n)), color=color_by_rarity(self._dct['rarity']))
+                    e = discord.Embed(title=num_to_emoji(n)+format_uppercase(l['name']), color=color_by_rarity(self._dct['rarity']))
+                    m_text = f'''**{self._h['zones']}:** {area} | **{self._h['rank']}:**{l['rank']}'''
+                    e.add_field(name='Información mapa', value=m_text, inline=False) 
                     e.set_image(url=f'''attachment://{l['map-img']}''')
                     d = {
                         'map-img': l['map-img'],

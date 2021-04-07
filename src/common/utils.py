@@ -262,3 +262,35 @@ def format_uppercase(s:str):
 
 def capitalize_join_list(l:list):
     return '\n'.join([format_uppercase(h) for h in l])
+
+def number_to_emoji(n:int):
+    number_to_emoji = {
+                        0: '0️⃣',
+                        1:'1️⃣',
+                        2:'2️⃣',
+                        3:'3️⃣',
+                        4:'4️⃣', 
+                        5:'5️⃣',
+                        6:'6️⃣', 
+                        7:'7️⃣', 
+                        8:'8️⃣', 
+                        9:'9️⃣', 
+                        10:'🔟'
+                    }
+    return number_to_emoji[n]
+
+def emoji_to_number(e):
+    emoji_to_number = {
+                        '0️⃣':0,
+                        '1️⃣':1, 
+                        '2️⃣':2, 
+                        '3️⃣':3, 
+                        '4️⃣':4, 
+                        '5️⃣':5, 
+                        '6️⃣':6, 
+                        '7️⃣':7,
+                        '8️⃣':8, 
+                        '9️⃣':9, 
+                        '🔟':10
+                        }
+    return emoji_to_number[e]

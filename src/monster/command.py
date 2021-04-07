@@ -141,7 +141,7 @@ class MonsterCog(commands.Cog):
             elif rank in ['low', 'alto']:
                 return 'drops/low/'
 
-    @commands.command(name='materiales', aliases=['materials'])
+    @commands.command(name='mats')
     async def drops(self, ctx: commands.Context, *args):
         monster_name, rank = InputParser(args).triplet()
         dct = self.__dbMonster.get_drops(str(ctx.guild.id), monster_name, rank)

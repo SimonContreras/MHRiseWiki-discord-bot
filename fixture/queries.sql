@@ -105,3 +105,14 @@ FROM monsterhabitat AS mh
 JOIN location AS l ON l.id = mh.location_id AND l.language = 1 
 WHERE mh.monster = 9
 
+/*
+Retrieve locations where can find a item */
+SELECT 
+li.area as "area",
+li.rank as "rank",
+li.map_available as "map_available",
+li.map_img as "map_img",
+l.name as "location"
+FROM locationitem AS li
+JOIN location AS l ON l.id = li.location_id  AND l.language = 1
+WHERE li.item = 133 AND li.location_language = 1

@@ -36,10 +36,10 @@ def populate_database():
     load_monster_stats('./fixture/csv/monsters-stats.csv')
     load_monster_esp_text('./fixture/csv/monsters-esp-text.csv')
     load_monsters_habitats('./fixture/csv/monsters-habitats.csv')
-    load_items('./fixture/csv/item.csv')
+    load_items('./fixture/csv/items.csv')
     load_item_combination('./fixture/csv/item-combination.csv')
-    load_item_text('./fixture/csv/item-text-esp.csv')
-    
+    load_item_text('./fixture/csv/items-text-esp.csv')
+    load_item_location('./fixture/csv/location-items.csv')
     print('III: Initial data done!!')
     armor_command_headers()
     more_item_headers()

@@ -194,6 +194,27 @@ def load_item_text(filename):
             )
             commit()
 
+
+@db_session
+def load_item_location(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #id,location,area,rank,item,stack,percentage,map_available,map_img
+            mt = LocationItem(
+                id=int(r[0]),
+                location=(int(r[1]), int(r[2])),
+                area=r[3],
+                rank=r[4],
+                item=int(r[5]),
+                stack=int(r[6]),
+                percentage=int(r[7]),
+                map_available=str_to_bool(r[8]),
+                map_img=r[9]          
+            )
+            commit()
+
 @db_session
 def load_guild():
     g1 = Guild(

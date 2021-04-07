@@ -27,6 +27,9 @@ ENV DATABASE_NAME=mh_rise_wiki
 
 # Assets for monster commands
 ENV THUMBNAIL_ROUTE=./assets/thumbnail/
+ENV MONSTER_IMG_ROUTE=./assets/img/monster/
+ENV ITEM_IMG_ROUTE=./assets/img/items/
+ENV ITEM_LOCATION_ROUTE=./assets/img/item-location/
 
 # Install pip requirements
 COPY requirements.txt .

@@ -1460,3 +1460,31 @@ def more_item_headers():
         type= 'title',
         command = c_eng,
     )
+    h5_esp = Header(
+        id = 147,
+        name = 'rank',
+        translation = 'rango',
+        type= 'title',
+        command = c_esp,
+    )
+    h5_eng = Header(
+        id = 148,
+        name = 'rank',
+        translation = 'rank',
+        type= 'title',
+        command = c_eng,
+    )
+    h6_esp = Header(
+        id = 149,
+        name = 'zones',
+        translation = 'zonas',
+        type= 'title',
+        command = c_esp,
+    )
+    h6_eng = Header(
+        id = 150,
+        name = 'zones',
+        translation = 'zones',
+        type= 'title',
+        command = c_eng,
+    )

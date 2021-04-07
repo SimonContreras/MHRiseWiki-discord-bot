@@ -63,12 +63,13 @@ class ItemEmbed(discord.Embed):
                 n+= 1
                 area = 'Ver mapa' if l['area'] == '0' else l['area']
                 if l['name'] != last_name:
-                    l_text += f'''{num_to_emoji(n)} | **{format_uppercase(l['name'])}:** | **zonas:** {area} | **rango:**{l['rank']} \n'''
+                    l_text += f'''{num_to_emoji(n)} | **{format_uppercase(l['name'])}:** | **{self._h['zones']}:**  \
+                                {area} | **{self._h['rank']}:**{l['rank']} \n'''
                     last_name = l['name']
                 else:
                     l_text = l_text.replace(f'''{num_to_emoji(n-1)}''',f'''{num_to_emoji(n-1)}-{num_to_emoji(n)}''' )
                 if l['map-available']:
-                    e = discord.Embed(title=format_uppercase(l['name']), color=color_by_rarity(self._dct['rarity']))
+                    e = discord.Embed(title=format_uppercase(l['name'] + num_to_emoji(n)), color=color_by_rarity(self._dct['rarity']))
                     e.set_image(url=f'''attachment://{l['map-img']}''')
                     d = {
                         'map-img': l['map-img'],

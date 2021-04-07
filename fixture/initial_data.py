@@ -693,7 +693,7 @@ def monster_command_headers():
     specie_esp2 = Header(
         id = 42,
         name='ailments',
-        translation='E.alterado/Plagas',
+        translation='E.alterados',
         type='title',
         command=monstruo
     )
@@ -1485,6 +1485,69 @@ def more_item_headers():
         id = 150,
         name = 'zones',
         translation = 'zones',
+        type= 'title',
+        command = c_eng,
+    )
+    h7_esp = Header(
+        id = 151,
+        name = 'map-information',
+        translation = 'Información mapa',
+        type= 'title',
+        command = c_esp,
+    )
+    h7_eng = Header(
+        id = 152,
+        name = 'map-information',
+        translation = 'Map information',
+        type= 'title',
+        command = c_eng,
+    )
+
+def more_monster_headers():
+    spanish = Language.select(lambda l: l.initials == 'esp').first()
+    english = Language.select(lambda l: l.initials == 'eng').first()
+    c_esp = Command.select(lambda c: (c.language == spanish and c.name == 'monstruo')).first()
+    c_eng = Command.select(lambda c: (c.language == english and c.name == 'monster')).first()
+
+    h1_esp = Header(
+        id = 153,
+        name = 'traps',
+        translation = 'Trampas',
+        type= 'title',
+        command = c_esp,
+    )
+    h1_eng = Header(
+        id = 154,
+        name = 'traps',
+        translation = 'Traps',
+        type= 'title',
+        command = c_eng,
+    )
+    h2_esp = Header(
+        id = 155,
+        name = 'danger-level',
+        translation = 'Nivel de peligro',
+        type= 'title',
+        command = c_esp,
+    )
+    h2_eng = Header(
+        id = 156,
+        name = 'danger-level',
+        translation = 'Danger level',
+        type= 'title',
+        command = c_eng,
+    )
+    h3_esp = Header(
+        id = 157,
+        name = 'plagues',
+        translation = 'Plagas',
+        type= 'title',
+        command = c_esp,
+    )
+    h3_eng = Header(
+        id = 158,
+        name = 'plagues',
+        translation = 'Plagues',
         type= 'title',
         command = c_eng,
     )

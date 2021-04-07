@@ -54,9 +54,10 @@ class MonsterEmbed(discord.Embed):
         embed.set_thumbnail(url=f'''attachment://{self.dct['img-url']}''')
         embed.add_field(name=self.h['species'], value=self.dct['species'], inline=True)
         embed.add_field(name=self.h['danger-level'], value='**'+str(self.dct['danger_level'])+'**'+':star:', inline=True)
-        shock_trap = item_to_emoji(self.ctx, 'pitfall_trap') if self.dct['pitfall_trap'] else '\u200b'
-        pitfall_trap = item_to_emoji(self.ctx, 'shock_trap') if self.dct['shock_trap'] else '\u200b'
-        traps_text = f'''{shock_trap} {pitfall_trap}'''
+        shock_trap_available = ':white_check_mark:' if self.dct['pitfall_trap'] else ':x:'
+        pitfall_trap_available = ':white_check_mark:' if self.dct['shock_trap'] else ':x:'
+        traps_text = f'''{item_to_emoji(self.ctx, 'pitfall_trap')} | {shock_trap_available} \n  \
+                         {item_to_emoji(self.ctx, 'shock_trap')} | {pitfall_trap_available}'''
         embed.add_field(name=self.h['traps'], value=traps_text, inline=True)
         embed.add_field(name=self.h['ailments'], value=status_or_element_to_emoji(self.ctx,self.dct['ailments']), inline=True)
         embed.add_field(name=self.h['inmune'], value=status_or_element_to_emoji(self.ctx,self.dct['inmune']), inline=True)

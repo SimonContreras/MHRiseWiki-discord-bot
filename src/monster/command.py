@@ -59,6 +59,8 @@ class MonsterCog(commands.Cog):
             await ctx.send(embed=embed.notFound())
 
         else:
+            print(self._monster_img_route+'icon/'+dct['img-url'])
+            print(dct['img-url'])
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
             thumbnail_file = discord.File(self._monster_img_route+'icon/'+dct['img-url'], filename=dct['img-url'])
             embed = MonsterEmbed(ctx, dct, headers)

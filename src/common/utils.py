@@ -315,10 +315,16 @@ def item_to_emoji(ctx, item: str):
             'shock_trap': 'shocktrap'
     }
 
-    e = ' '
+    translate = {
+                    'pitfall_trap':'T.escollo',
+                    'shock_trap':'T.eléctrica',
+            }
+    e = '-'
+
     for emoji in ctx.guild.emojis:
         if (i[item] == emoji.name) and (emoji.is_usable()):
             e = f'''<:{emoji.name}:{emoji.id}>'''
             break
-    
+    if e == '-':
+        return translate[item]
     return e

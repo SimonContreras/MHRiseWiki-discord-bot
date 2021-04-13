@@ -46,6 +46,9 @@ def populate_database():
     load_item_combination('./fixture/csv/item-combination.csv')
     load_item_text('./fixture/csv/items-text-esp.csv')
     load_item_location('./fixture/csv/location-items.csv')
+    load_skilltrees('./fixture/csv/skilltrees.csv')
+    load_skilltreeText('./fixture/csv/skilltreetext-esp.csv')
+    load_skilllvlText('./fixture/csv/skilllvltext-esp.csv')
     print('III: Initial data done!!')
     
 

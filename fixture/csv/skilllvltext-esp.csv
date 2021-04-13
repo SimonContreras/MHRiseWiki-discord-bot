@@ -1,0 +1,335 @@
+1,1,1,1: Ataque +3.
+1,1,2,2: Ataque +6
+1,1,3,3: Ataque +9.
+1,1,4,4: Ataque +5 % Bonus adicional +7
+1,1,5,5: Ataque +6 % Bonus adicional +8
+1,1,6,6: Ataque +8 % Bonus adicional +9
+1,1,7,7: Ataque +10 % Bonus adicional +10
+2,1,1,1: Ataque +4 y afinidad +3 % mientras esté activo.
+2,1,2,2: Ataque +8 y afinidad +5 % mientras esté activo.
+2,1,3,3: Ataque +12 y afinidad +7 % mientras esté activo.
+2,1,4,4: Ataque +16 y afinidad +10 % mientras esté activo.
+2,1,5,5: Ataque +20 y afinidad +15 % mientras esté activo.
+3,1,1,1: Ataque +5 mientras esté activo.
+3,1,2,2: Ataque +10 mientras esté activo.
+3,1,3,3: Ataque +20 mientras esté activo.
+4,1,1,1: Ataque +5 mientras esté activo.
+4,1,2,2: Ataque +10 mientras esté activo.
+4,1,3,3: Ataque +15 mientras esté activo.
+4,1,4,4: Ataque +20 mientras esté activo.
+4,1,5,5: Ataque +25 mientras esté activo.
+5,1,1,1: Ataque +5 mientras esté activo.
+5,1,2,2: Ataque +10 mientras esté activo.
+5,1,3,3: Ataque +20 mientras esté activo.
+6,1,1,1: Afinidad +5 %.
+6,1,2,2: Afinidad +10 %
+6,1,3,3: Afinidad +15 %.
+6,1,4,4: Afinidad +20 %.
+6,1,5,5: Afinidad +25 %.
+6,1,6,6: Afinidad +30 %.
+6,1,7,7: Afinidad +40 %.
+7,1,1,1: Aumenta en un 30 % el daño de los ataques críticos.
+7,1,2,2: Aumenta en un 35 % el daño de los ataques críticos.
+7,1,3,3: Aumenta en un 40 % el daño de los ataques críticos.
+8,1,1,1: Los ataques a puntos débiles tienen afinidad +15 %.
+8,1,2,2: Los ataques a puntos débiles tienen afinidad +30 %.
+8,1,3,3: Los ataques a puntos débiles tienen afinidad +50 %.
+9,1,1,"1: Mientras está activo, aumenta la afinidad un 10 % y reduce el gasto de resistencia un 30 %."
+9,1,2,"2: Mientras está activo, aumenta la afinidad un 20 % y reduce el gasto de resistencia un 30 %."
+9,1,3,"3: Mientras está activo, aumenta la afinidad un 30 % y reduce el gasto de resistencia un 50 %."
+9,1,4,"4: Mientras está activo, aumenta la afinidad"
+10,1,1,"1: Mientras está activo, aumenta la afinidad un 10 %."
+10,1,2,"2: Mientras está activo, aumenta la afinidad un 20 %."
+10,1,3,"3: Mientras está activo, aumenta la afinidad un 30 %."
+11,1,1,1: Daño elemental +5 % mientras esté activo.
+11,1,2,2: Daño elemental +10 % mientras esté activo.
+11,1,3,3: Daño elemental +15 % mientras esté activo.
+12,1,1,1: Ataque de fuego +2
+12,1,2,2: Ataque de fuego +3
+12,1,3,3: Ataque de fuego +5 % Bonus adicional +4
+12,1,4,4: Ataque de fuego +10 % Bonus adicional +4
+12,1,5,5: Ataque de fuego +20 % Bonus adicional +4
+13,1,1,1: Ataque de agua +2
+13,1,2,2: Ataque de agua +3
+13,1,3,3: Ataque de agua +5 % Bonus adicional +4
+13,1,4,4: Ataque de agua +10 % Bonus adicional +4
+13,1,5,5: Ataque de agua +20 % Bonus adicional +4
+14,1,1,1: Ataque de hielo +2
+14,1,2,2: Ataque de hielo +3
+14,1,3,3: Ataque de hielo +5 % Bonus adicional +4
+14,1,4,4: Ataque de hielo +10 % Bonus adicional +4
+14,1,5,5: Ataque de hielo +20 % Bonus adicional +4
+15,1,1,1: Ataque de rayo +2
+15,1,2,2: Ataque de rayo +3
+15,1,3,3: Ataque de rayo +5 % Bonus adicional +4
+15,1,4,4: Ataque de rayo +10 % Bonus adicional +4
+15,1,5,5: Ataque de rayo +20 % Bonus adicional +4
+16,1,1,1: Ataque de draco +2
+16,1,2,2: Ataque de draco +3
+16,1,3,3: Ataque de draco +5 % Bonus adicional +4
+16,1,4,4: Ataque de draco + 10 % Bonus adicional +4
+16,1,5,5: Ataque de draco +20 % Bonus adicional +4
+17,1,1,1: Acumulación de veneno +5 %. Bonus adicional +1.
+17,1,2,2: Acumulación de veneno +10 %. Bonus adicional +2.
+17,1,3,3: Acumulación de veneno +20 %. Bonus adicional +5.
+18,1,1,1: Acumulación parálisis +5 %. Bonus adicional +1.
+18,1,2,2: Acumulación parálisis +10 %. Bonus adicional +2.
+18,1,3,3: Acumulación parálisis +20 %. Bonus adicional +5.
+19,1,1,1: Acumulación de sueño +5 %. Bonus adicional +1.
+19,1,2,2: Acumulación de sueño +10 %. Bonus adicional +2.
+19,1,3,3: Acumulación de sueño +20 %. Bonus adicional +5.
+20,1,1,1: Acumulación de nitro +5 %. Bonus adicional +1.
+20,1,2,2: Acumulación de nitro +10 %. Bonus adicional +2.
+20,1,3,3: Acumulación de nitro +20 %. Bonus adicional +5.
+21,1,1,1: Afilado del arma +10.
+21,1,2,2: Afilado del arma +20.
+21,1,3,3: Afilado del arma +30.
+21,1,4,4: Afilado del arma +40.
+21,1,5,5: Afilado del arma +50.
+22,1,1,1: Activo el 10 % de las veces.
+22,1,2,2: Activo el 25 % de las veces.
+22,1,3,3: Activo el 50 % de las veces.
+23,1,1,1: Activo el 3 % de las veces.
+23,1,2,2: Activo el 10 % de las veces.
+23,1,3,3: Activo el 20 % de las veces.
+24,1,1,1: El efecto dura 30 segundos.
+24,1,2,2: El efecto dura 60 segundos.
+24,1,3,3: El efecto dura 90 segundos.
+25,1,1,1: +10 % de daño a enemigos duros y 50 % de reducción de los ataques desviados.
+25,1,2,2: +15 % de daño a enemigos duros y 100 % de reducción de los ataques desviados.
+25,1,3,3: +30 % de daño a enemigos duros y 100 % de reducción de los ataques desviados.
+26,1,1,1: Aumenta un poco el alcance.
+26,1,2,2: Aumenta el alcance.
+26,1,3,3: Aumenta mucho el alcance.
+27,1,1,1: Poder de ataque +5 % cuando la barra de afilado del arma es amarilla o menos.
+27,1,2,2: Poder de ataque +10 % cuando la barra de afilado del arma es amarilla o menos.
+27,1,3,3: Poder de ataque +10 % cuando la barra de afilado es verde o menos.
+28,1,1,1: Activa el efecto de la habilidad.
+29,1,1,"1: Las barras se rellenan un 5 % más rápido, y los ataques cargados un 5 % más rápido."
+29,1,2,"2: Las barras se rellenan un 10 % más rápido, y los ataques cargados un 10 % más rápido."
+29,1,3,"3: Las barras se rellenan un 20 % más rápido, y los ataques cargados un 15 % más rápido."
+30,1,1,1: Aumenta un poco la duración de las bonificaciones de las armas.
+30,1,2,2: Aumenta la duración de las bonificaciones de las armas.
+30,1,3,3: Aumenta mucho la duración de las bonificaciones de las armas.
+31,1,1,1: Reduce el consumo gradual de resistencia un 15 %.
+31,1,2,2: Reduce el consumo gradual de resistencia un 30 %.
+31,1,3,3: Reduce el consumo gradual de resistencia un 50 %.
+32,1,1,1: Reduce el consumo puntual de resistencia un 10 %.
+32,1,2,2: Reduce el consumo puntual de resistencia un 20 %.
+32,1,3,3: Reduce el consumo puntual de resistencia un 30 %.
+32,1,4,4: Reduce el consumo puntual de resistencia un 40 %.
+32,1,5,5: Reduce el consumo puntual de resistencia un 50 %.
+33,1,1,1: Velocidad de recuperación de resistencia +10 %.
+33,1,2,2: Velocidad de recuperación de resistencia +20 %.
+33,1,3,3: Velocidad de recuperación de resistencia +40 %.
+34,1,1,1: Reduce muy poco el impacto de los ataques.
+34,1,2,2: Reduce levemente el impacto de los ataques y el gasto de resistencia un 15 %.
+34,1,3,3: Reduce el impacto de los ataques y el gasto de resistencia un 15 %.
+34,1,4,4: Reduce el impacto de los ataques y el gasto de resistencia un 30 %.
+34,1,5,5: Reduce mucho el impacto de los ataques y el gasto de resistencia un 30 %.
+35,1,1,1: Reduce el daño recibido un 30 %.
+35,1,2,2: Reduce el daño recibido un 50 %.
+35,1,3,3: Reduce el daño recibido un 80 %.
+36,1,1,1: Ataque +5 % mientras esté activo.
+36,1,2,2: Ataque +10 % mientras esté activo.
+36,1,3,3: Ataque +15 % mientras esté activo.
+37,1,1,1: Afinidad +10 %
+37,1,2,2: Afinidad +20 %.
+37,1,3,3: Afinidad +40 %.
+38,1,1,1: Pequeña posibilidad de aturdir. Fuerza de los ataques al desenfundar +3.
+38,1,2,2: Posibilidad de aturdir. Fuerza de los ataques al desenfundar +5.
+38,1,3,3: Gran posibilidad de aturdir. Fuerza de los ataques al desenfundar +7.
+39,1,1,1: Aumenta levemente la velocidad al desenfundar.
+39,1,2,2: Aumenta moderadamente la velocidad al desenfundar.
+39,1,3,3: Aumenta enormemente la velocidad al desenfundar.
+40,1,1,1: Posibilidad de aturdir +20 %.
+40,1,2,2: Posibilidad de aturdir +30 %.
+40,1,3,3: Posibilidad de aturdir +40 %.
+41,1,1,1: Posibilidad de agotar +20 %.
+41,1,2,2: Posibilidad de agotar +30 %.
+41,1,3,3: Posibilidad de agotar +40 %.
+42,1,1,1: Permite el uso de la habilidad.
+43,1,1,1: Activa el efecto de la habilidad.
+44,1,1,1: Potencia el poder de cada ataque un 10 % y acelera el enfriamiento del fuego de wyvern un 15 %.
+44,1,2,2: Potencia el poder de cada ataque un 20 % y acelera el enfriamiento del fuego de wyvern un 30 %.
+44,1,3,3: Potencia el poder de cada ataque un 30 % y acelera el enfriamiento del fuego de wyvern un 50 %.
+45,1,1,1: Aumenta la velocidad de recarga de la munición y los viales.
+45,1,2,2: Capacidad de carga de la lanza pistola +1. Aumenta los viales del hacha cargada.
+46,1,1,1: Aumenta el poder del tiro especial de la ballesta y perforadragones un 10 %.
+46,1,2,2: Aumenta el poder del tiro especial de la ballesta y perforadragones un 20 %.
+47,1,1,1: Aumenta un poco la potencia de los disparos con munición normal y salva de flechas.
+47,1,2,2: Aumenta la potencia de los disparos con munición normal y salva de flechas.
+47,1,3,3: Aumenta mucho la potencia de los disparos con munición normal y salva de flechas.
+48,1,1,1: Aumenta ligeramente el poder de la munición perforante y flechas perforantes.
+48,1,2,2: Aumenta el poder de D perforante y las flechas perforantes.
+48,1,3,3: Aumenta mucho el poder de la munición perforante y flechas perforantes.
+49,1,1,"1: Aumenta ligeramente el poder de D abanico, D metralla y flechas en abanico."
+49,1,2,"2: Aumenta el poder de D abanico, D metralla y flechas en abanico."
+49,1,3,"3: Aumenta mucho el poder de D abanico, D metralla y flechas en abanico."
+50,1,1,1: Aumenta la capacidad de carga para unos pocos tipos de munición.
+50,1,2,2: Aumenta la capacidad de carga para varios tipos de munición.
+50,1,3,3: Aumenta la capacidad de carga para casi todos los tipos de munición.
+51,1,1,1: Velocidad de ballesta +1. Mejora el manejo del arco.
+51,1,2,2: Velocidad de ballesta +2. Carga los viales del arco automáticamente.
+51,1,3,3: Velocidad de ballesta +3.
+52,1,1,1: Cadencia -1.
+52,1,2,2: Cadencia -2.
+52,1,3,3: Cadencia -3.
+53,1,1,1: Desvío -1.
+53,1,2,2: Desvío -2.
+54,1,1,1: Daño de fuego rápido +5 %.
+54,1,2,2: Daño de fuego rápido +10 %.
+54,1,3,3: Daño de fuego rápido +20 %.
+55,1,1,1: Defensa +5.
+55,1,2,2: Defensa +10.
+55,1,3,3: Defensa +5 %. Bonus: +10.
+55,1,4,4: Defensa +5 %. Bonus: +20. Resistencias elementales +3.
+55,1,5,5: Defensa +8 %. Bonus: +20. Resistencias elementales +3.
+55,1,6,6: Defensa +8 %. Bonus: +35. Resistencias elementales +5.
+55,1,7,7: Defensa +10 %. Bonus: +35. Resistencias elementales +5.
+56,1,1,"1: Mientras esté activo, reduce el daño recibido un 15 %."
+56,1,2,"2: Mientras esté activo, reduce el daño recibido un 30 %."
+56,1,3,"3: Mientras esté activo, reduce el daño recibido un 50 %."
+57,1,1,1: Aumenta un poco la recuperación.
+57,1,2,2: Aumenta la recuperación.
+57,1,3,3: Aumenta mucho la recuperación.
+58,1,1,1: Duplica la velocidad a la que se cura la parte de daño recuperable.
+58,1,2,2: Triplica la velocidad a la que se cura la parte de daño recuperable.
+58,1,3,3: Cuadruplica la velocidad a la que se cura la parte de daño recuperable.
+59,1,1,1: Aumenta un poco la velocidad al comer.
+59,1,2,2: Aumenta la velocidad al comer.
+59,1,3,3: Aumenta mucho la velocidad al comer.
+60,1,1,1: Reduce el efecto de los rugidos más débiles.
+60,1,2,2: Anula el efecto de los rugidos más débiles.
+60,1,3,3: Anula el efecto de los rugidos más débiles y reduce el efecto de los rugidos fuertes.
+60,1,4,4: Anula el efecto de los rugidos débiles y fuertes.
+60,1,5,5: Anula el efecto de los rugidos débiles y fuertes. Reduce el efecto de los rugidos más potentes.
+61,1,1,1: Anula ráfagas de vientos menores.
+61,1,2,"2: Anula las ráfagas de viento, tanto mayores como menores."
+61,1,3,"3: Anula las ráfagas de viento menores y mayores, y reduce los efectos de las ráfagas de viento draco."
+62,1,1,1: Anula los temblores de tierra menores.
+62,1,2,2: Anula los temblores de tierra menores y reduce el efecto de los temblores mayores.
+62,1,3,3: Anula los temblores de tierra menores y mayores.
+63,1,1,1: Reduce el efecto de la plaga de burbujas débil.
+63,1,2,"2: Reduce los efectos de las plagas de burbujas débiles y fuertes, e incrementa la evasión estando afectado."
+63,1,3,3: Evadir más ataques provocará plaga de burbujas.
+64,1,1,1: Alarga muy poco el momento de invulnerabilidad al hacer un esquive.
+64,1,2,2: Alarga un poco el momento de invulnerabilidad al hacer un esquive.
+64,1,3,3: Alarga el momento de invulnerabilidad al hacer un esquive.
+64,1,4,4: Alarga mucho el momento de invulnerabilidad al hacer un esquive.
+64,1,5,5: Alarga muchísimo el momento de invulnerabilidad al hacer un esquive.
+65,1,1,1: Aumenta un poco la distancia a la que esquivas.
+65,1,2,2: Aumenta la distancia a la que esquivas.
+65,1,3,3: Aumenta mucho la distancia a la que esquivas.
+66,1,1,1: Resistencia al fuego +6.
+66,1,2,2: Resistencia al fuego +12.
+66,1,3,3: Resistencia al fuego +20. Defensa +10.
+67,1,1,1: Resistencia al agua +6.
+67,1,2,2: Resistencia al agua +12.
+67,1,3,3: Resistencia al agua +20. Defensa +10.
+68,1,1,1: Resistencia al hielo +6.
+68,1,2,2: Resistencia al hielo +12.
+68,1,3,3: Resistencia al hielo +20. Defensa +10.
+69,1,1,1: Resistencia al rayo +6.
+69,1,2,2: Resistencia al rayo +12.
+69,1,3,3: Resistencia al rayo +20. Defensa +10.
+70,1,1,1: Resistencia a draco +6.
+70,1,2,2: Resistencia a draco +12.
+70,1,3,3: Resistencia a draco +20. Defensa +10.
+71,1,1,1: Reduce la duración de todas las plagas elementales un 50 %.
+71,1,2,2: Reduce la duración de todas las plagas elementales un 75 %.
+71,1,3,3: Anula todas las plagas elementales.
+72,1,1,1: Reduce las veces que sufres daños por veneno.
+72,1,2,2: Reduce mucho las veces que sufres daños por veneno.
+72,1,3,3: Previene el envenenamiento y reduce su efecto.
+73,1,1,1: Reduce la duración de la parálisis un 30 %.
+73,1,2,2: Reduce la duración de la parálisis un 60 %.
+73,1,3,3: Previene la parálisis.
+74,1,1,1: Reduce la duración del sueño un 30 %.
+74,1,2,2: Reduce la duración del sueño un 60 %.
+74,1,3,3: Previene el sueño.
+75,1,1,1: Reduce la duración del aturdimiento un 60 %.
+75,1,2,2: Reduce la duración del aturdimiento un 90 %.
+75,1,3,3: Previene el aturdimiento.
+76,1,1,1: Reduce las limitaciones a la velocidad de movimiento.
+76,1,2,2: Anula las limitaciones a la velocidad de movimiento.
+77,1,1,1: Ralentiza la plaga de nitro y reduce el daño por explosión.
+77,1,2,2: Ralentiza mucho la plaga de nitro y reduce mucho el daño por explosión.
+77,1,3,3: Previene la plaga de nitro.
+78,1,1,1: Cada vez que extraes hierbas consigues una adicional.
+78,1,2,"2: Cada vez que extraes hierbas, frutas, nueces o semillas consigues una adicional."
+78,1,3,"3: Cada vez que extraes hierbas, frutas, nueces, semillas o insectos consigues uno adicional."
+78,1,4,"4: Cada vez que extraes hierbas, frutas, nueces, semillas, insectos o setas consigues una adicional."
+79,1,1,1: Permite conseguir recursos de pilas de huesos una vez más de lo normal.
+79,1,2,2: Permite conseguir recursos de puntos de recolección una vez más de lo normal.
+79,1,3,3: Permite conseguir recursos de afloramientos mineros una vez más de lo normal.
+80,1,1,1: Bonus de daño +10 %.
+80,1,2,2: Bonus de daño +20 %.
+80,1,3,3: Bonus de daño +30 %.
+81,1,1,1: Activa el efecto de la habilidad.
+82,1,1,1: Aumenta un poco la suerte.
+82,1,2,2: Aumenta la suerte.
+82,1,3,3: Aumenta mucho la suerte.
+83,1,1,1: Hace el proceso de afilado un ciclo más corto.
+83,1,2,2: Hace el proceso de afilado dos ciclos más corto.
+83,1,3,3: Hace el proceso de afilado tres ciclos más corto.
+84,1,1,1: Potencia de fuego +10 %.
+84,1,2,2: Potencia de fuego + 20%.
+84,1,3,3: Potencia de fuego +30 %.
+85,1,1,1: Permite digerir setas azules y hongos.
+85,1,2,"2: Adicionalmente, permite digerir nitrosetas y paralisetas."
+85,1,3,"3: Adicionalmente, permite digerir mandrágoras y setas excitantes."
+86,1,1,1: Duración del efecto de objetos +10 %.
+86,1,2,2: Duración del efecto de objetos +25 %.
+86,1,3,3: Duración del efecto de objetos +50 %.
+87,1,1,1: Los objetos afectan a los aliados cercanos con un 33 % de eficacia.
+87,1,2,2: Los objetos afectan a los aliados en un mayor radio con un 33 % de eficacia.
+87,1,3,3: Los objetos afectan a los aliados en un mayor radio con un 66 % de eficacia.
+87,1,4,4: Los objetos afectan a los aliados en un radio mucho mayor con un 66 % de eficacia.
+87,1,5,5: Los objetos afectan a los aliados en
+88,1,1,1: Activo el 10 % de las veces.
+88,1,2,2: Activo el 25 % de las veces.
+88,1,3,3: Activo el 45 % de las veces.
+89,1,1,"1: Mientras esté activo, aumenta la defensa en 50."
+89,1,2,2: Ataque +5 % y defensa +50 mientras esté activo.
+89,1,3,3: Ataque +5 % y defensa +100 mientras esté activo.
+89,1,4,4: Ataque +10 % y defensa +100 mientras esté activo.
+89,1,5,5: Poder de ataque +30 % mientras esté activo. Se pierden los efectos de aumento de defensa.
+90,1,1,1: Aumenta el ataque un 10 % y la defensa un 15 % con cada uso.
+91,1,1,1: Previene los derribos.
+91,1,2,2: Previene los derribos. Los empujes hacia atrás se sustituyen por derribos.
+91,1,3,3: Previene ser derribado o empujado hacia atrás.
+92,1,1,1: Anula los derribos durante los saltos.
+93,1,1,1: Activa el efecto de la habilidad.
+94,1,1,1: Prolonga un 50 % el tiempo que tarda la barra de resistencia en reducirse.
+94,1,2,2: Prolonga un 100 % el tiempo que tarda la barra de resistencia en reducirse.
+94,1,3,3: Previene que tu barra de resistencia se reduzca.
+95,1,1,1: Permite el uso de la habilidad.
+96,1,1,1: Activa el efecto de la habilidad.
+97,1,1,1: Hace más fácil llenar la barra de montura y aumenta la posibilidad de bloqueo.
+98,1,1,1: Aumenta un 30 % el tiempo que puedes mantener un cordóptero.
+98,1,2,2: Aumenta más la tasa de recuperación pasiva del cordóptero.
+98,1,3,3: Aumenta más la tasa de recuperación pasiva en tierra.
+99,1,1,1: Reduce en un 25 % el gasto de resistencia mientras se corre por la pared.
+99,1,2,2: Reduce en un 50 % el gasto de resistencia mientras se corre por la pared.
+99,1,3,3: Correr por una pared aumenta temporalmente el poder de ataque.
+100,1,1,1: Ataque +10 tras activarse.
+100,1,2,2: Ataque +15 tras activarse.
+100,1,3,3: Ataque +25 tras activarse.
+101,1,1,1: Velocidad +10 %.
+101,1,2,2: Velocidad +20 %. Daño por mutación +10 %.
+101,1,3,3: Velocidad +30 %. Daño por mutación +20 %.
+102,1,1,1: Reduce el daño recibido por el fuego infernal.
+102,1,2,2: Aumenta el daño recibido por el fuego infernal.
+102,1,3,3: Inflige plaga de fuego infernal a monstruos enfurecidos.
+102,1,4,4: El efecto dura un minuto tras desaparecer la furia del monstruo.
+103,1,1,1: Resistencia a draco +1
+103,1,2,2: Resistencia a draco +2
+103,1,3,3: Resistencia a draco +3
+103,1,4,4: Resistencia a draco +4
+103,1,5,5: También otorga el estado Suertudo.
+104,1,1,1: Resistencia al rayo +1
+104,1,2,2: Resistencia al rayo +2
+104,1,3,3: Resistencia al rayo +3
+104,1,4,4: Resistencia al rayo +4
+104,1,5,5: También otorga el estado Suertudo.

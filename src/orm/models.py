@@ -324,7 +324,7 @@ class MonsterRewardConditionText(db.Entity):
 class SkillTree(db.Entity):
     id = PrimaryKey(int, auto=True)
     max_level = Required(int)
-    icon = Required(str)
+    icon_color = Required(str)
     secret = Required(int, default=0)
     unlocks_tree = Optional('SkillTree', reverse='unlocks_tree')
 

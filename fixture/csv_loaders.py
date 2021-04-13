@@ -216,6 +216,50 @@ def load_item_location(filename):
             commit()
 
 @db_session
+def load_skilltrees(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #id,max_level,icon_color,secret
+            mt = SkillTree(
+                id=int(r[0]),
+                max_level=int(r[1]),
+                icon_color=r[2],
+                secret=int(r[3])
+            )
+            commit()
+
+@db_session
+def load_skilltreeText(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #skilltree_id,language,name,description
+            mt = SkillTreeText(
+                    skillTree=int(r[0]),
+                    language=int(r[1]),
+                    name=r[2],
+                    description=r[3]
+            )
+            commit()
+
+@db_session
+def load_skilllvlText(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #skilltree_id,language,level,description
+            mt = SkillLvlText(
+                    skillTree=int(r[0]),
+                    language=int(r[1]),
+                    level=int(r[2]),
+                    description=r[3]
+            )
+            commit()
+@db_session
 def load_guild():
     g1 = Guild(
         id='807761997285818378',

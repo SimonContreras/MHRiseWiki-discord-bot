@@ -1,0 +1,104 @@
+1,1,Ataque,Aumenta la fuerza de ataque.
+2,1,Instigador,Aumenta la fuerza de ataque y la afinidad cuando los monstruos grandes se enfurecen.
+3,1,Plena forma,Aumenta el ataque cuando la salud está completa.
+4,1,Resentimiento,Aumenta el ataque cuando se activa el daño temporal (la parte roja de la barra de salud).
+5,1,Resistencia,Aumenta la fuerza de ataque cuando sufres un estado alterado.
+6,1,Ojo crítico,Aumenta la afinidad.
+7,1,Potenciador crítico,Aumenta el daño de golpes críticos.
+8,1,Punto débil,Aumenta la afinidad de los ataques que aprovechan el punto débil de un monstruo.
+9,1,Poder latente,Aumenta temporalmente la afinidad y reduce el gasto de resistencia al cumplir con ciertas condiciones.
+10,1,Afinidad,Aumenta la afinidad mientras la resistencia esté llena durante cierto tiempo.
+11,1,Elemento crítico,"Aumenta el daño elemental (fuego, agua, rayo, hielo, draco) cuando es resultado de un crítico."
+12,1,Ataque de fuego,Potencia los ataques de fuego. (La potencia de ataque elemental tiene un límite máximo).
+13,1,Ataque de agua,Potencia los ataques de agua. (La potencia de ataque elemental tiene un límite máximo).
+14,1,Ataque de hielo,Potencia los ataques de hielo. (La potencia de ataque elemental tiene un límite máximo).
+15,1,Ataque de rayo,Potencia los ataques de rayo. (La potencia de ataque elemental tiene un límite máximo).
+16,1,Ataque de draco,Potencia los ataques de draco. (La potencia de ataque elemental tiene un límite máximo).
+17,1,Ataque venenoso,Potencia los ataques venenosos. (La potencia de ataque elemental tiene un límite máximo).
+18,1,Ataque paralizante,Potencia los ataques paralizantes. (La potencia de ataque elemental tiene un límite máximo).
+19,1,Ataque de sueño,Potencia los ataques de sueño. (La potencia de ataque elemental tiene un límite máximo).
+20,1,Ataque nitro,Potencia los ataques nitro. (La potencia de ataque elemental tiene un límite máximo).
+21,1,Artesanía,"Extiende la barra de afilado del arma, pero no lo hará más allá de su máximo predeterminado."
+22,1,Filo de cuchilla,Evita que el arma pierda filo.
+23,1,Tiro extra,"Para arcos y ballestas, a veces disparas sin gastar viales ni munición."
+24,1,Acabado protector,El filo del arma no disminuye durante un tiempo tras afilarla.
+25,1,Ojo mental,Tus ataques fallan menos y causan más daño a objetivos duros.
+26,1,Precisión,La munición y flechas alcanzan la máxima potencia en una distancia más corta.
+27,1,Impacto mejorado,Aumenta la fuerza de ataque cuando el afilado de tu arma es bajo.
+28,1,Arquero maestro,Aumenta en 1 el nivel de carga del arco.
+29,1,Tiempo de carga,"Carga los indicadores de armas rápidamente, así como los ataques cargados con armas que lo permitan."
+30,1,Carga prolongada,"Espadas largas y dobles, glaives insecto, hachas espada y cargadas duran cargadas más tiempo."
+31,1,Esprint,"Reduce el gasto de resistencia para acciones que la consumen gradualmente, como esprintar."
+32,1,Constitución,"Disminuye el gasto de resistencia al esquivar, bloquear o hacer otras ciertas acciones."
+33,1,Adrenalina,Aumenta la velocidad de recuperación de tu resistencia.
+34,1,Guardia mejorada,Reduce la distancia que retrocedes y el gasto de resistencia al bloquear ataques.
+35,1,Escudo,Permite protegerse de ataques que normalmente no se pueden bloquear.
+36,1,Bloqueo agresivo,Aumenta el poder de ataque de manera temporal tras realizar un bloqueo perfecto.
+37,1,Desenfundar,Aumenta la afinidad durante un tiempo tras un ataque al desenfundar. (Los ataques de cordoamarre no cuentan).
+38,1,Pena inmediata,Añade efecto aturdidor a los ataques al desenfundar y aumenta un poco el ataque. (Los ataques de cordoamarre no cuentan).
+39,1,Desenfunde veloz,Aumenta la velocidad al desenfundar el arma equipada.
+40,1,Aturdir,Facilita el aturdimiento de monstruos.
+41,1,Agotador,Aumenta la posibilidad de que ciertos ataques agoten a los monstruos.
+42,1,Afinidad deslizante,Deslizarse aumenta la afinidad un tiempo.
+43,1,Músico,Aumenta la rapidez al tocar en general y el daño de la onda de choque.
+44,1,Artillería,"Potencia ataques explosivos, como proyectiles, fuego de wyvern, viales del hacha cargada y disparos explosivos."
+45,1,Cargar arma,"Mejora la recarga y capacidad de munición de la lanza pistola, y la capacidad de viales del hacha cargada."
+46,1,Tiro especial,Aumenta el poder del tiro especial de la ballesta y perforadragones.
+47,1,Normal/salva+,Aumenta la potencia de los disparos con munición normal y salva de flechas.
+48,1,Perforante+,Aumenta el poder de la munición perforante y flechas perforantes.
+49,1,Abanico+,Aumenta el poder de D abanico y de las flechas en abanico.
+50,1,Munición+,Mejora la capacidad de carga de la ballesta. (Hasta un cierto límite).
+51,1,Recarga,Mejora la recarga de la ballesta y la velocidad de carga de viales del arco.
+52,1,Cadencia,Reduce el retroceso al disparar munición de ballesta.
+53,1,Estabilidad,Suprime el desvío de los disparos de la ballesta.
+54,1,Disparo múltiple,Mejora el fuego rápido de la ballesta ligera.
+55,1,Aumento defensivo,Aumenta la defensa. A niveles altos mejora también las resistencias elementales.
+56,1,Bendición divina,Posibilidad predeterminada de reducir el daño recibido.
+57,1,Recuperación,Aumenta la cantidad de salud recuperada al usar un objeto curativo.
+58,1,Recuperación rápida,Acelera la recuperación de daño temporal (la parte roja de la barra de salud).
+59,1,Consumir,Aumenta la velocidad al comer carne y consumir objetos.
+60,1,Tapones,Protege contra los rugidos de monstruos grandes.
+61,1,Antiviento,Reduce o anula los efectos de las ráfagas de viento.
+62,1,Antitemblores,Protege contra los temblores de tierra.
+63,1,Danza burbujeante,Reduce la plaga de burbujas y otorga una mayor evasión al verse afectado.
+64,1,Intervalo evasivo,Extiende el periodo de invulnerabilidad al esquivar.
+65,1,Distancia evasiva,Aumenta la distancia de evasión.
+66,1,Antifuego,Aumenta la resistencia al fuego. En niveles más altos también mejora la defensa.
+67,1,Antiagua,Aumenta la resistencia al agua. En niveles más altos también mejora la defensa.
+68,1,Antihielo,Aumenta la resistencia al hielo. En niveles más altos también mejora la defensa.
+69,1,Antirrayo,Aumenta la resistencia al rayo. En niveles más altos también mejora la defensa.
+70,1,Antidraco,Aumenta la resistencia al draco. En niveles más altos también mejora la defensa.
+71,1,Antiplagas,Otorga protección contra todas las plagas elementales.
+72,1,Antiveneno,Reduce el daño al estar envenenado.
+73,1,Antiparálisis,Reduce o elimina los efectos de la parálisis.
+74,1,Antisueño,Reduce o elimina los efectos del sueño.
+75,1,Antiaturdimiento,Reduce la duración del aturdimiento.
+76,1,Antifango,Reduce la falta de movilidad al estar atrapado en fango de monstruo o nieve profunda.
+77,1,Antinitro,Otorga protección contra la plaga de nitro.
+78,1,Botánico,Aumenta la cantidad de hierbas y otros objetos consumibles que se obtienen al extraer recursos.
+79,1,Geólogo,Aumenta la cantidad de veces que se puede usar un punto de recolección.
+80,1,Rompepartes,Facilita el partir o romper algunas partes de monstruos grandes.
+81,1,Maestro capturas,Mejora la probabilidad de recibir objetos extra en recompensas de captura. (No aplicable si la misión ya ha empezado).
+82,1,Afortunado,Buena probabilidad de recibir objetos extra en recompensas de misión. (No aplicable si la misión ya ha empezado).
+83,1,Afilado rápido,Aumenta la velocidad de afilado del arma al usar una piedra de afilar.
+84,1,Bombardero,Aumenta el daño de los objetos explosivos.
+85,1,Experto en setas,Permite digerir setas no comestibles y beneficiarse de sus efectos.
+86,1,Duración de objetos,Aumenta la duración del efecto de algunos objetos.
+87,1,Efecto área,Permite que el efecto de ciertos objetos también afecte a aliados cercanos.
+88,1,Comida gratis,Ofrece una probabilidad determinada de consumir un objeto de comida o bebida gratis.
+89,1,Heroicidad,Aumenta el poder de ataque y la defensa cuando la salud baja al 35 % o menos.
+90,1,Fortalecer,Aumenta el ataque y la defensa al caer en combate. (No aplicable en ciertas misiones. Acumulable hasta dos veces).
+91,1,Mejora de balance,Previene reacciones a pequeños ataques como ser empujado hacia atrás.
+92,1,Experto en salto,Evita que los ataques te interrumpan mientras saltas.
+93,1,Experto cortador,Evita que te derriben mientras cortas partes de monstruos.
+94,1,Gasto resistencia,Reduce el gasto de resistencia máximo a lo largo del tiempo.
+95,1,Mejora de salto,"Permite esquivar lanzándose al estar de cara a monstruos grandes, y alarga la distancia de esquive."
+96,1,Distracción,Permite llamar más la atención al atacar a un monstruo.
+97,1,As de la monta,Mejora las habilidades de montura wyvern.
+98,1,Domacordópteros,Mejora tu manejo de los cordópteros.
+99,1,Correparedes,Reduce el consumo de resistencia al correr por las paredes.
+100,1,Contraataque,Aumenta el poder de ataque de manera temporal tras salir despedido.
+101,1,Mutación rápida,Aumenta la velocidad de cambio y la fuerza de ataque de las hachas espada y las hachas cargadas.
+102,1,Manto infernal,Otorga resistencia al fuego y poder explosivo de fuego a los ataques.
+103,1,Viento unificado,Otorga el poder del dragón anciano Ibushi de viento.
+104,1,Rayo unificado,Otorga el poder del dragón anciano Narwa de trueno.

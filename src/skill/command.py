@@ -23,7 +23,7 @@ class SkillCog(commands.Cog):
 
     """
     def __init__(self, bot: commands.Bot):
-        self.bot = bot
+        self._bot = bot
         self.name = 'Skill Cog'
         self.description = '''Skill commands MH Rise Wiki'''
         self.__dbHeader = db_header
@@ -58,7 +58,30 @@ class SkillCog(commands.Cog):
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
             thumbnail_file = discord.File(self._skill_img_route+dct['icon'], filename=dct['icon'])
             embed = SkillEmbed(dct, headers)
-            embed_main = embed.main()
-            await ctx.send(embed=embed_main, file=thumbnail_file)
-    
+            embed_main, embed_deco = embed.main()
+
+            if embed_deco is None:
+                await ctx.send(embed = embed_main, file=thumbnail_file)
+            else:
+                message = await ctx.send(embed=embed_main, file=thumbnail_file)
+                await message.add_reaction('▶')
+                valid_reactions = ['▶']
+                
+                def check(reaction, user):
+                    return user == ctx.author
+
+                reaction = None
+                reaction_used = []
+                while True:
+                    if str(reaction) in valid_reactions and str(reaction) not in reaction_used:
+                        reaction_used.append(str(reaction))
+                        deco_file = discord.File(self._skill_img_route+dct['icon'], filename=dct['icon'])
+                        await ctx.send(embed=embed_deco, file=deco_file)
+                    try:
+                        reaction, user = await self._bot.wait_for(event='reaction_add', timeout = 60.0, check = check)
+                        await message.remove_reaction(reaction, user)
+                    except:
+                        break
+
+                await message.clear_reactions()
     

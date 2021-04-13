@@ -36,18 +36,26 @@ class SkillEmbed(discord.Embed):
             retrieve embed with skill info formatted
         """
         embed= discord.Embed(title=format_uppercase(self._dct['name']), description=self._dct['description'], color=discord.Color.blue())
+        embed2 = None
         embed.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
         text_skill_levels = ' '
         for l in self._dct['levels']:
             text_skill_levels += f'''**Lv{l['level']}:** {l['description'][3:]} \n'''
-        
-        #text_jewels = ' '
-        #for jwl in self._dct['jewels']:
-        #    text_jewels += f'''**Lv{str(jwl['level'])}:** {jwl['name']} \n'''
 
         embed.add_field(name=self._h['level'], value=text_skill_levels, inline=False)
-        #embed.add_field(name=self._h['talisman'], value=self._dct['talisman'], inline=True)
-        #embed.add_field(name=self._h['jewels'], value=text_jewels, inline=True)
         embed.timestamp = datetime.datetime.now()
         embed.set_footer(text=format_uppercase(self._dct['name']))
-        return embed
+        
+        #embed.add_field(name=self._h['talisman'], value=self._dct['talisman'], inline=True)
+        
+        if self._dct['jewel'] is not None:
+            embed.add_field(name='Decoración/Joya', value='Click a :arrow_forward: para ver', inline=False)
+            embed2 = discord.Embed(title=self._dct['jewel']['name'], description=self._dct['jewel']['description'], color=discord.Color.blue())
+            embed2.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
+            embed2.add_field(name='Rareza', value=self._dct['jewel']['rarity'], inline=True)
+            embed2.add_field(name='Espacios', value=self._dct['jewel']['slot'], inline=True)
+            embed2.add_field(name='Nivel de habilidad', value=self._dct['jewel']['level'], inline=True)
+            embed2.add_field(name='Desbloqueable al cazar/llegar a', value=self._dct['jewel']['unlock'], inline=False)
+            embed2.add_field(name='Materiales', value=self._dct['jewel']['materials'], inline=False)
+        
+        return embed, embed2

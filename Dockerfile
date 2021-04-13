@@ -30,6 +30,7 @@ ENV THUMBNAIL_ROUTE=./assets/thumbnail/
 ENV MONSTER_IMG_ROUTE=./assets/img/monster/
 ENV ITEM_IMG_ROUTE=./assets/img/items/
 ENV ITEM_LOCATION_ROUTE=./assets/img/item-location/
+ENV SKILL_LOCATION_ROUTE=./assets/img/skills/
 
 # Install pip requirements
 COPY requirements.txt .
@@ -41,5 +42,5 @@ WORKDIR /bot
 COPY . /bot
 
 # Run bot
-CMD ["python", "main.py"]
+#CMD ["python", "main.py"]
 

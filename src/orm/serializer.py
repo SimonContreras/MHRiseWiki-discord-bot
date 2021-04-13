@@ -418,13 +418,25 @@ class SkillSerializer():
     
     def serialize(self):
         levels = [{'level':str(l.level), 'description':l.description} for l in self.l]
-        jewels = [{'name':j[0].name, 'level':str(j[1].skill_level)} for j in self.j ]
+        jewel = None
+        if len(self.j) >=1:
+            jewel = {
+                        'name':self.j[0][0].name, 
+                        'level':str(self.j[0][1].skill_level),
+                        'description': self.j[0][0].description,
+                        'materials': self.j[0][0].materials,
+                        'unlock': self.j[0][0].unlock,
+                        'price': str(self.j[0][1].price),
+                        'rarity': str(self.j[0][1].rarity),
+                        'level': str(self.j[0][1].skill_level),
+                        'slot': str(self.j[0][1].slot)
+                        }
         dct = {
             'name': self.s_t.name,
             'description': self.s_t.description,
             'icon': self.st.icon_color,
             'levels':levels,
-            'jewels': jewels,
+            'jewel': jewel,
 
         }
 

@@ -5,6 +5,9 @@ class TipSerializer():
     def __init__(self, query):
         self._query = query
 
+    def serialize(self):
+        return self._query.to_dict()
+    
     def serialize_list(self):
         main_dct = {'tips': []}
         for r in self._query:
@@ -407,12 +410,11 @@ class WeaponSerializer():
     
 class SkillSerializer():
 
-    def __init__(self, skill_text, skilltree, decorations, levels, talisman):
+    def __init__(self, skill_text, skilltree, decorations, levels):
         self.s_t = skill_text
         self.st = skilltree
         self.j = decorations
         self.l = levels
-        self.t = talisman
     
     def serialize(self):
         levels = [{'level':str(l.level), 'description':l.description} for l in self.l]
@@ -420,7 +422,7 @@ class SkillSerializer():
         dct = {
             'name': self.s_t.name,
             'description': self.s_t.description,
-            'talisman':self.t[1].name,
+            'icon': self.st.icon_color,
             'levels':levels,
             'jewels': jewels,
 

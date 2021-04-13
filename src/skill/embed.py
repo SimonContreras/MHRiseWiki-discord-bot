@@ -1,6 +1,6 @@
 import discord
 import datetime
-
+from src.common.utils import format_uppercase
 class SkillEmbed(discord.Embed):
     """
     Embed that renders Skill information
@@ -20,8 +20,8 @@ class SkillEmbed(discord.Embed):
 
     """
     def __init__(self, dct: dict, headers: dict):
-        self.__dct = dct
-        self.__h = headers
+        self._dct = dct
+        self._h = headers
 
     def main(self):
         """ Retrieve embed with Skill information formatted:
@@ -35,19 +35,19 @@ class SkillEmbed(discord.Embed):
         Embed
             retrieve embed with skill info formatted
         """
-        embed= discord.Embed(title=self.__dct['name'], description=self.__dct['description'], color=discord.Color.blue())
+        embed= discord.Embed(title=format_uppercase(self._dct['name']), description=self._dct['description'], color=discord.Color.blue())
+        embed.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
+        text_skill_levels = ' '
+        for l in self._dct['levels']:
+            text_skill_levels += f'''**Lv{l['level']}:** {l['description'][3:]} \n'''
         
-        text_skill_levels = ''
-        for l in self.__dct['levels']:
-            text_skill_levels += f'''**Lv{l['level']}:** {l['description']} \n'''
-        
-        text_jewels = ''
-        for jwl in self.__dct['jewels']:
-            text_jewels += f'''**Lv{str(jwl['level'])}:** {jwl['name']} \n'''
+        #text_jewels = ' '
+        #for jwl in self._dct['jewels']:
+        #    text_jewels += f'''**Lv{str(jwl['level'])}:** {jwl['name']} \n'''
 
-        embed.add_field(name=self.__h['level'], value=text_skill_levels, inline=False)
-        embed.add_field(name=self.__h['talisman'], value=self.__dct['talisman'], inline=True)
-        embed.add_field(name=self.__h['jewels'], value=text_jewels, inline=True)
+        embed.add_field(name=self._h['level'], value=text_skill_levels, inline=False)
+        #embed.add_field(name=self._h['talisman'], value=self._dct['talisman'], inline=True)
+        #embed.add_field(name=self._h['jewels'], value=text_jewels, inline=True)
         embed.timestamp = datetime.datetime.now()
-        embed.set_footer(text=self.__dct['name'])
+        embed.set_footer(text=format_uppercase(self._dct['name']))
         return embed

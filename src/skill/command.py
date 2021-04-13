@@ -1,3 +1,5 @@
+import os
+import discord
 from discord.ext import commands
 from src.skill.embed import SkillEmbed
 from src.common.embed import CommonEmbed
@@ -26,6 +28,7 @@ class SkillCog(commands.Cog):
         self.description = '''Skill commands MH Rise Wiki'''
         self.__dbHeader = db_header
         self.__dbSkill = db_skill
+        self._skill_img_route=os.getenv('SKILL_LOCATION_ROUTE')
 
     @commands.command(name='hab', aliases=['skill'])
     async def skill(self, ctx: commands.Context, *args):
@@ -53,8 +56,9 @@ class SkillCog(commands.Cog):
 
         else:
             headers = self.__dbHeader.get_headers(str(ctx.guild.id), ctx.invoked_with)
+            thumbnail_file = discord.File(self._skill_img_route+dct['icon'], filename=dct['icon'])
             embed = SkillEmbed(dct, headers)
             embed_main = embed.main()
-            await ctx.send(embed=embed_main)
+            await ctx.send(embed=embed_main, file=thumbnail_file)
     
     

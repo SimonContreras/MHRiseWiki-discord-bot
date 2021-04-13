@@ -714,6 +714,10 @@ class DecorationText(db.Entity):
     decoration = Required(Decoration)
     language = Required(Language)
     name = Required(str)
+    description=Required(str)
+    unlock=Required(str)
+    materials=Required(str)
+
     PrimaryKey(decoration, language)
 
 class Talisman(db.Entity):

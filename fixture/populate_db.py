@@ -49,6 +49,8 @@ def populate_database():
     load_skilltrees('./fixture/csv/skilltrees.csv')
     load_skilltreeText('./fixture/csv/skilltreetext-esp.csv')
     load_skilllvlText('./fixture/csv/skilllvltext-esp.csv')
+    load_decorations('./fixture/csv/decorations.csv')
+    load_decorationsText('./fixture/csv/decorationtext-esp.csv')
     print('III: Initial data done!!')
     
 

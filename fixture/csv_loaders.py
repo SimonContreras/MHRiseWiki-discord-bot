@@ -259,6 +259,41 @@ def load_skilllvlText(filename):
                     description=r[3]
             )
             commit()
+
+@db_session
+def load_decorations(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #id,slot,rarity,price,skilltree,skill_level
+            mt = Decoration(
+                    id=int(r[0]),
+                    slot=int(r[1]),
+                    rarity=int(r[2]),
+                    price=int(r[3]),
+                    skilltree=int(r[4]),
+                    skill_level=int(r[5])
+
+            )
+            commit()
+
+@db_session
+def load_decorationsText(filename):
+    with open(filename, newline='') as csvfile:
+        csv_reader = csv.reader(csvfile, delimiter=',')
+        for r in csv_reader:
+            print(r)
+            #id,language_id,name,description,unlock,materials
+            mt = DecorationText(
+                    decoration=int(r[0]),
+                    language=int(r[1]),
+                    name=r[2],
+                    description=r[3],
+                    unlock=r[4],
+                    materials=r[5]
+            )
+            commit()
 @db_session
 def load_guild():
     g1 = Guild(

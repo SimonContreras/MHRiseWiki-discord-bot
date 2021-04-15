@@ -306,6 +306,11 @@ def load_guild():
         prefix='?',
         language=1
         )
+    g3 = Guild(
+        id='827039344405512192',
+        prefix='?',
+        language=2
+        )
     commit()
 
 

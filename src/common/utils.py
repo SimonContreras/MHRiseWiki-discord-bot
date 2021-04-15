@@ -202,7 +202,7 @@ def status_or_element_to_emoji(ctx, se: list):
         'hedor':'dung',
         'fatiga':'fatigue',
         'fuego':'fireblight',
-        '':'hellfireblight',
+        'fuego_infernal':'hellfireblight',
         'hielo':'iceblight',
         'barro':'mud',
         'paralisis':'paralysis',
@@ -215,6 +215,7 @@ def status_or_element_to_emoji(ctx, se: list):
         'telaraña':'webbed',
         
         #english
+        'blastblight':'blast',
         'blast':'blast',
         'bleed':'bleed',
         'bubbleblight':'bubbleblight',
@@ -234,6 +235,11 @@ def status_or_element_to_emoji(ctx, se: list):
         'thunderblight':'thunderblight',
         'waterblight':'waterblight',
         'webbed':'webbed',
+        'fire':'fireblight',
+        'water':'waterblight',
+        'ice':'iceblight',
+        'thunder':'thunderblight',
+        'dragon':'dragonblight',
 
     }
     e = []

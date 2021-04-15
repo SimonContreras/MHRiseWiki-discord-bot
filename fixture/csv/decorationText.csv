@@ -410,3 +410,416 @@ Antidraco",Gremio 7,"250z
 Joya de Suiko x1
 Hueso afilado x2
 Esquirla cáscara dragón x2"
+1,2,Capacity Jewel 3,"A decoration that enhances the Ammo Up skill.
+Ammo Up",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Ibushi Windsac x3
+Nargacuga Fang+ x3
+Jyuratodus Fang+ x2"
+2,2,Guardian Jewel 3,"A decoration that enhances the Offensive Guard skill.
+Offensive Guard",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Ibushi Hide+ x3
+Volvidon Claw+ x3
+Diablos Medulla x2"
+3,2,Fungiform Jewel 3,"A decoration that enhances the Mushroomancer skill.
+Mushroomancer",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Tigrex Maw x1
+Anjanath Fang+ x3
+Mandragora x3"
+4,2,Draw Jewel 3,"A decoration that enhances the Critical Draw skill.
+Critical Draw",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Ibushi Claw+ x3
+Majestic Horn x2
+Amber Fang+ x1"
+5,2,Precise Jewel 2,"A decoration that enhances the Aim Booster skill.
+Aim Booster",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Narwa Claw+ x2
+Zinogre Claw+ x3
+Diablos Medulla x1"
+6,2,Crit Element Jewel 2,"A decoration that enhances the Critical Element skill.
+Critical Element",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Elder Dragon Blood x2
+Block of Ice+ x2
+Tobi-Kadachi Electrode+ x1"
+7,2,Artillery Jewel 2,"A decoration that enhances the Artillery skill.
+Artillery",Magnamalo,"1,500z
+Bloodrun Jewel x4
+Magnamalo Scale+ x4
+Pukei-Pukei Sac+ x2
+Tetranadon Beak+ x1"
+8,2,Sprinter Jewel 2,"A decoration that enhances the Marathon Runner skill.
+Marathon Runner",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Zinogre Electrofur x3
+Diablos Carapace x3
+Royal Ludroth Claw+ x2"
+9,2,Charger Jewel 2,"A decoration that enhances the Focus skill.
+Focus",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Ibushi Windsac x3
+Magnamalo Scute+ x3
+Rathalos Medulla x2"
+10,2,Mind's Eye Jewel 2,"A decoration that enhances the Mind's Eye skill.
+Mind's Eye",Tigrex,"1,500z
+Bloodrun Jewel x5
+Goss Harag Hide+ x2
+Mizutsune Purplefur+ x3
+Gold Rajang Pelt x2"
+11,2,Potential Jewel 2,"A decoration that enhances the Heroics skill.
+Heroics",Diablos,"1,500z
+Bloodrun Jewel x5
+Rajang Tail x2
+Majestic Horn x2
+Tigrex Scale+ x2"
+12,2,Trueshot Jewel 2,"A decoration that enhances the Special Ammo Boost skill.
+Special Ammo Boost",Almudron,"1,500z
+Bloodrun Jewel x4
+Almudron Claw+ x2
+Somnacanth Fin+ x2
+Mizutsune Claw+ x2"
+13,2,Magazine Jewel 2,"A decoration that enhances the Load Shells skill.
+Load Shells",Goss Harag,"1,500z
+Bloodrun Jewel x4
+Goss Harag Horn+ x2
+Bishaten Tailcase+ x2
+Beast Gem x1"
+14,2,Shield Jewel 2,"A decoration that enhances the Guard Up skill.
+Guard Up",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Narwa Carapace x3
+Goss Harag Brace+ x3
+Basarios Pleura+ x2"
+15,2,Ironwall Jewel 2,"A decoration that enhances the Guard skill.
+Guard",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Narwa Sparksac x3
+Almudron Fin+ x3
+Tetranadon Disc+ x2"
+16,2,Refresh Jewel 2,"A decoration that enhances the Stamina Surge skill.
+Stamina Surge",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Tigrex Scale+ x3
+Almudron Whisker+ x2
+Royal Ludroth Crest+ x2"
+17,2,Enhancer Jewel 2,"A decoration that enhances the Power Prolonger skill.
+Power Prolonger",Almudron,"1,500z
+Bloodrun Jewel x4
+Block of Ice+ x2
+Golden Sludge x2
+Wyvern Gem x1"
+18,2,Mighty Jewel 2,"A decoration that enhances the Maximum Might skill.
+Maximum Might",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Narwa Claw+ x2
+Goss Harag Fur+ x4
+Rathian Plate x1"
+19,2,Attack Jewel 2,"A decoration that enhances the Attack Boost skill.
+Attack Boost",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x5
+Rajang Blackfur x3
+Goss Harag Claw+ x3
+Magnamalo Plate x1"
+20,2,Expert Jewel 2,"A decoration that enhances the Critical Eye skill.
+Critical Eye",Thunder Serpent Narwa,"1,500z
+Bloodrun Jewel x4
+Elder Dragon Blood x3
+Rajang Blackfur x3
+Ibushi Bluespike x1"
+21,2,Quickswitch Jewel 2,"A decoration that enhances the Rapid Morph skill.
+Rapid Morph",Tigrex,"1,000z
+Bloodrun Jewel x3
+Tigrex Claw+ x2
+Somnacanth Talon+ x1
+Rakna-Kadaki Silk x2"
+22,2,Absorber Jewel 1,"A decoration that enhances the Recoil Down skill.
+Recoil Down",Rakna-Kadaki,"1,000z
+Bloodrun Jewel x2
+Rakna-Kadaki Sharpclaw x2
+Anjanath Nosebone+ x1"
+23,2,Blunt Jewel 2,"A decoration that enhances the Bludgeoner skill.
+Bludgeoner",Diablos,"1,000z
+Bloodrun Jewel x4
+Goss Harag Brace+ x3
+Diablos Ridge+ x2
+Rajang Tail x1"
+24,2,Quickload Jewel 1,"A decoration that enhances the Reload Speed skill.
+Reload Speed",Village★3orHall★2,"1,000z
+Bloodrun Jewel x3
+Magnamalo Scale+ x2
+Diablos Carapace x2
+Bishaten Fur+ x1"
+25,2,Steadfast Jewel 1,"A decoration that enhances the Stun Resistance skill.
+Stun Resistance",Village★3orHall★2,"1,000z
+Bloodrun Jewel x2
+Rakna-Kadaki Carapace x2
+Almudron Shell+ x2"
+26,2,Footing Jewel 2,"A decoration that enhances the Tremor Resistance skill.
+Tremor Resistance",Goss Harag,"1,000z
+Bloodrun Jewel x2
+Diablos Ridge+ x2
+Great Stoutbone x1
+Tetra Carapace+ x2"
+27,2,Earplug Jewel 3,"A decoration that enhances the Earplugs skill.
+Earplugs",Magnamalo,"1,000z
+Bloodrun Jewel x4
+Magnamalo Shell+ x4
+Tigrex Maw x1
+Lagombi Ear+ x1"
+28,2,Counter Jewel 2,"A decoration that enhances the Counterstrike skill.
+Counterstrike",Village★3 Supply Run,"750z
+Bloodrun Jewel x2
+Rathalos Scale+ x3
+Ibushi Horn+ x1"
+29,2,Bubble Jewel 2,"A decoration that enhances the Bubbly Dance skill.
+Bubbly Dance",Mizutsune,"750z
+Bloodrun Jewel x1
+Bubblefoam+ x2
+Torrent Sac x2"
+30,2,Sniper Jewel 1,"A decoration that enhances the Steadiness skill.
+Steadiness",Barioth,"750z
+Bloodrun Jewel x1
+Mizutsune Scale+ x2
+Rathalos Wing x1"
+31,2,Gambit Jewel 2,"A decoration that enhances the Punishing Draw skill.
+Punishing Draw",Zinogre,"750z
+Bloodrun Jewel x2
+Zinogre Horn+ x1
+Somnacanth Shell+ x2
+Goss Harag Claw x1"
+32,2,Jumping Jewel 2,"A decoration that enhances the Evade Extender skill.
+Evade Extender",Tobi-Kadachi,"750z
+Bloodrun Jewel x2
+Zinogre Shocker+ x4
+Tobi-Kadachi Scale+ x2"
+33,2,Evasion Jewel 2,"A decoration that enhances the Evade Window skill.
+Evade Window",Rathalos,"750z
+Bloodrun Jewel x2
+Barioth Claw+ x2
+Tobi-Kadachi Pelt+ x2
+Rathalos Carapace x1"
+34,2,Brace Jewel 1,"A decoration that enhances the Flinch Free skill.
+Flinch Free",Zinogre,"750z
+Bloodrun Jewel x2
+Zinogre Carapace x2
+Mizutsune Claw+ x2"
+35,2,Sheath Jewel 2,"A decoration that enhances the Quick Sheath skill.
+Quick Sheath",Nargacuga,"750z
+Bloodrun Jewel x2
+Nargacuga Pelt+ x2
+Tobi-Kadachi Claw+ x1
+Bishaten Talon+ x1"
+36,2,Wind Res Jewel 1,"A decoration that enhances the Windproof skill.
+Windproof",Village★3 Supply Run,"750z
+Bloodrun Jewel x1
+Basarios Carapace x2
+Tetra Carapace+ x2"
+37,2,KO Jewel 2,"A decoration that enhances the Slugger skill.
+Slugger",Anjanath,"750z
+Bloodrun Jewel x1
+Anjanath Nosebone+ x2
+Barroth Scalp x1"
+38,2,Friendship Jewel 2,"A decoration that enhances the Wide-Range skill.
+Wide-Range",Village★2orHall★2,"750z
+Bloodrun Jewel x1
+Mizutsune Claw+ x1
+Nargacuga Scale+ x2
+Lifepowder x2"
+39,2,Destroyer Jewel 2,"A decoration that enhances the Partbreaker skill.
+Partbreaker","
+Village★2orHall★2","750z
+Bloodrun Jewel x1
+Zinogre Claw+ x2
+Amber Fang+ x1
+Diablos Tailcase x1"
+40,2,Resistor Jewel 2,"A decoration that enhances the Blight Resistance skill.
+Blight Resistance",Village★2orHall★2,"750z
+Bloodrun Jewel x1
+Freezer Sac x1
+Thunder Sac x1
+Torrent Sac x1"
+41,2,Gobbler Jewel 2,"A decoration that enhances the Speed Eating skill.
+Speed Eating",Village★2orHall★2,"750z
+Bloodrun Jewel x2
+Anjanath Fang+ x2
+Tetranadon Beak+ x1"
+42,2,Protection Jewel 2,"A decoration that enhances the Divine Blessing skill.
+Divine Blessing",Village★2orHall★2,"750z
+Bloodrun Jewel x4
+Somnacanth Scale+ x3
+Mizutsune Fin+ x2
+Wyvern Gem x1"
+43,2,Wall Run Jewel 2,"A decoration that enhances the Wall Runner skill.
+Wall Runner",Bishaten,"500z
+Aquaglow Jewel x2
+Bishaten Talon+ x2
+Quality Stomach x2"
+44,2,Wirebug Jewel 2,"A decoration that enhances the Wirebug Whisperer skill.
+Wirebug Whisperer",Bishaten,"500z
+Aquaglow Jewel x2
+Bishaten Feather+ x2
+Monster Broth x2"
+45,2,Grinder Jewel 1,"A decoration that enhances the Speed Sharpening skill.
+Speed Sharpening",Rathian,"500z
+Aquaglow Jewel x2
+Rath Wingtalon+ x2
+Great Izuchi Tail+ x1"
+46,2,Enduring Jewel 2,"A decoration that enhances the Item Prolonger skill.
+Item Prolonger",Royal Ludroth,"500z
+Aquaglow Jewel x1
+Royal Ludroth Scale+ x2"
+47,2,Recovery Jewel 1,"A decoration that enhances the Recovery Speed skill.
+Recovery Speed",Jyuratodus,"500z
+Aquaglow Jewel x1
+Jyuratodus Fin+ x2"
+48,2,Medicine Jewel 2,"A decoration that enhances the Recovery Up skill.
+Recovery Up",Basarios,"500z
+Aquaglow Jewel x2
+Basarios Pleura+ x2
+Ancient Potion x1"
+49,2,Sonorous Jewel 1,"A decoration that enhances the Horn Maestro skill.
+Horn Maestro",Pukei-Pukei,"500z
+Aquaglow Jewel x1
+Pukei-Pukei Sac+ x1"
+50,2,Drain Jewel 1,"A decoration that enhances the Stamina Thief skill.
+Stamina Thief",Barroth,"500z
+Aquaglow Jewel x1
+Barroth Claw+ x2"
+51,2,Physique Jewel 2,"A decoration that enhances the Constitution skill.
+Constitution",Volvidon,"500z
+Aquaglow Jewel x2
+Volvi Carapace x3
+Fucium Ore x1"
+52,2,Venom Jewel 1,"A decoration that enhances the Poison Attack skill.
+Poison Attack",Pukei-Pukei,"500z
+Aquaglow Jewel x2
+Pukei-Pukei Scale+ x2
+Toxin Sac x1"
+53,2,Slider Jewel 1,"A decoration that enhances the Affinity Sliding skill.
+Affinity Sliding",Unlocking HR,"500z
+Aquaglow Jewel x1
+Lagombi Plastron+ x1
+Spongy Hide+ x1"
+54,2,Bomber Jewel 1,"A decoration that enhances the Bombardier skill.
+Bombardier",Unlocking HR,"500z
+Aquaglow Jewel x1
+Inferno Sac x1
+Magna Ghostprism x2"
+55,2,Blaze Jewel 1,"A decoration that enhances the Fire Attack skill.
+Fire Attack",Unlocking HR,"500z
+Aquaglow Jewel x2
+Rathian Scale+ x2
+Inferno Sac x1"
+56,2,Stream Jewel 1,"A decoration that enhances the Water Attack skill.
+Water Attack",Unlocking HR,"500z
+Aquaglow Jewel x2
+Jyuratodus Carapace x2
+Torrent Sac x1"
+57,2,Bolt Jewel 1,"A decoration that enhances the Thunder Attack skill.
+Thunder Attack",Unlocking HR,"500z
+Aquaglow Jewel x2
+Pearl Hide x2
+Thunder Sac x1"
+58,2,Frost Jewel 1,"A decoration that enhances the Ice Attack skill.
+Ice Attack",Unlocking HR,"500z
+Aquaglow Jewel x2
+Lagombi Pelt+ x2
+Great Baggi Claw+ x2"
+59,2,Dragon Jewel 1,"A decoration that enhances the Dragon Attack skill.
+Dragon Attack",Unlocking HR,"500z
+Aquaglow Jewel x2
+Rathian Carapace x2
+Dragonbone Relic x1"
+60,2,Defense Jewel 1,"A decoration that enhances the Defense Boost skill.
+Defense Boost",Unlocking HR,"500z
+Aquaglow Jewel x2
+Basarios Carapace x2
+Barroth Ridge+ x1"
+61,2,Carver Jewel 1,"A decoration that enhances the Carving Pro skill.
+Carving Pro",Tetranadon,"250z
+Aquaglow Jewel x1
+Tetra Carapace+ x2"
+62,2,Rodeo Jewel 2,"A decoration that enhances the Master Mounter skill.
+Master Mounter",Aknosom,"250z
+Aquaglow Jewel x1
+Aknosom Feather+ x2"
+63,2,Hungerless Jewel 1,"A decoration that enhances the Hunger Resistance skill.
+Hunger Resistance",Tetranadon,"250z
+Aquaglow Jewel x1
+Tetranadon Beak+ x1"
+64,2,Satiated Jewel 1,"A decoration that enhances the Free Meal skill.
+Free Meal",Khezu,"250z
+Aquaglow Jewel x2
+Suspicious Fang+ x2
+Kulu-Ya-Ku Beak+ x1"
+65,2,Muck Jewel 1,"A decoration that enhances the Muck Resistance skill.
+Muck Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Lagombi Plastron+ x2
+Barroth Shell x1"
+66,2,Diversion Jewel 1,"A decoration that enhances the Diversion skill.
+Diversion",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Remobra Hide+ x3"
+67,2,Dive Jewel 1,"A decoration that enhances the Leap of Faith skill.
+Leap of Faith",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Bullfango Pelt+ x2
+Stoutbone x1"
+68,2,Fortitude Jewel 2,"A decoration that enhances the Fortify skill.
+Fortify",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Arzuros Carapace x2"
+69,2,Geology Jewel 1,"A decoration that enhances the Geologist skill.
+Geologist",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Kulu-Ya-Ku Scale+ x2"
+70,2,Botany Jewel 1,"A decoration that enhances the Botanist skill.
+Botanist",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Great Izuchi Pelt+ x2"
+71,2,Antiblast Jewel 1,"A decoration that enhances the Blast Resistance skill.
+Blast Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Inferno Sac x2
+Bombadgy Igniter x2"
+72,2,Pep Jewel 1,"A decoration that enhances the Sleep Resistance skill.
+Sleep Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Great Baggi Hide+ x2
+Baggi Scale+ x2"
+73,2,Antipara Jewel 1,"A decoration that enhances the Paralysis Resistance skill.
+Paralysis Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Bnahabra Carapace x3
+Bnahabra Stinger x1"
+74,2,Antidote Jewel 1,"A decoration that enhances the Poison Resistance skill.
+Poison Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Great Wroggi Hide+ x2
+Wroggi Scale+ x2"
+75,2,Fire Res Jewel 1,"A decoration that enhances the Fire Resistance skill.
+Fire Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Aknosom Scale+ x2"
+76,2,Water Res Jewel 1,"A decoration that enhances the Water Resistance skill.
+Water Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Tetranadon Hide+ x2"
+77,2,Thunder Res Jewel 1,"A decoration that enhances the Thunder Resistance skill.
+Thunder Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Pearl Hide x2"
+78,2,Ice Res Jewel 1,"A decoration that enhances the Ice Resistance skill.
+Ice Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Lagombi Frozenclaw x2"
+79,2,Dragon Res Jewel 1,"A decoration that enhances the Dragon Resistance skill.
+Dragon Resistance",GatheringHub 7,"250z
+Aquaglow Jewel x1
+Monster Keenbone x2
+Dragonhusk Shard x2"

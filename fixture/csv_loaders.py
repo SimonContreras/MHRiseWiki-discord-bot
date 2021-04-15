@@ -108,7 +108,7 @@ def load_monster_stats(filename):
             commit()
 
 @db_session
-def load_monster_esp_text(filename):
+def load_monster_text(filename):
     with open(filename, newline='') as csvfile:
         csv_reader = csv.reader(csvfile, delimiter=',')
         for r in csv_reader:

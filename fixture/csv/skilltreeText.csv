@@ -102,3 +102,107 @@
 102,1,manto infernal,Otorga resistencia al fuego y poder explosivo de fuego a los ataques.
 103,1,viento unificado,Otorga el poder del dragón anciano Ibushi de viento.
 104,1,rayo unificado,Otorga el poder del dragón anciano Narwa de trueno.
+1,2,attack boost,Increases attack power.
+2,2,agitator,Increases attack power and affinity when large monsters become enraged.
+3,2,peak performance,Increases attack when your health is full.
+4,2,resentment,Increases attack when you have recoverable damage (the red portion of your health gauge).
+5,2,resuscitate,Increases attack power when you are suffering from an abnormal status.
+6,2,critical eye,Increases affinity.
+7,2,critical boost,Increases the damage of critical hits.
+8,2,weakness exploit,Increases the affinity of attacks that exploit a monster weak spot.
+9,2,latent power,Temporarily increases affinity and reduces stamina depletion when certain conditions are met.
+10,2,maximum might,Increases affinity if stamina is kept full for a period of time.
+11,2,critical element,"Increases elemental damage (fire, water, thunder, ice, dragon) when landing critical hits."
+12,2,fire attack,Increases fire element attack power. (Elemental attack power has a maximum limit.)
+13,2,water attack,Increases water element attack power. (Elemental attack power has a maximum limit.)
+14,2,ice attack,Increases ice element attack power. (Elemental attack power has a maximum limit.)
+15,2,thunder attack,Increases thunder element attack power. (Elemental attack power has a maximum limit.)
+16,2,dragon attack,Increases dragon element attack power. (Elemental attack power has a maximum limit.)
+17,2,poison attack,Increases poison element attack power. (Elemental attack power has a maximum limit.)
+18,2,paralysis attack,Increases paralysis element attack power. (Elemental attack power has a maximum limit.)
+19,2,sleep attack,Increases sleep element attack power. (Elemental attack power has a maximum limit.)
+20,2,blast attack,Increases blast element attack power. (Elemental attack power has a maximum limit.)
+21,2,handicraft,"Extends the weapon sharpness gauge. However, it will not increase the gauge past its maximum."
+22,2,razor sharp,Prevents your weapon from losing sharpness.
+23,2,spare shot,Bow and bowgun shots have a chance not to expend coatings or ammo.
+24,2,protective polish,Weapon sharpness does not decrease for a set time after sharpening.
+25,2,mind's eye,Your attacks are deflected less and deal more damage to hard targets.
+26,2,aim booster,Shortens the distance before ammo and arrows reach maximum power.
+27,2,bludgeoner,Increases attack power when your weapon sharpness is low.
+28,2,bow charge plus,Increases max bow charge level by one.
+29,2,focus,Increases the fill rate for weapons with gauges and the charge rate for weapons with charge attacks.
+30,2,power prolonger,"Long swords, dual blades, insect glaives, switch axes, and charge blades stay powered up longer."
+31,2,marathon runner,Slows down stamina depletion for actions which continuously drain stamina (such as dashing).
+32,2,constitution,"Reduces stamina depletion when evading, blocking, or doing certain other actions."
+33,2,stamina surge,Speeds up stamina recovery.
+34,2,guard,Reduces knockbacks and stamina depletion when guarding.
+35,2,guard up,Allows you to guard against ordinarily unblockable attacks.
+36,2,offensive guard,Temporarily increases attack power after executing a perfectly-timed guard.
+37,2,critical draw,Increases affinity for a short time after performing a draw attack. (Does not include Silkbind attacks.)
+38,2,punishing draw,Adds a stun effect to draw attacks and slightly increases attack power. (Does not include Silkbind attacks.)
+39,2,quick sheath,Speeds up weapon sheathing.
+40,2,slugger,Makes it easier to stun monsters.
+41,2,stamina thief,Increases certain attacks' ability to exhaust monsters.
+42,2,affinity sliding,Sliding increases your affinity for a short time.
+43,2,horn maestro,Increases overall performance speed and shockwave damage.
+44,2,artillery,"Strengthens explosive attacks like shells, Wyvern's Fire, charge blade phial attacks, and Sticky Ammo."
+45,2,load shells,"Improves reloading, and increases the gunlance's shell capacity and charge blade's phial capacity."
+46,2,special ammo boost,Increases the power of bowgun special ammo and Dragon Piercer.
+47,2,normal/rapid up,Increases the attack power of Normal Ammo and Rapid-type arrows.
+48,2,pierce up,Increases the attack power of Piercing Ammo and Piercing-type arrows.
+49,2,spread up,Increases the attack power of Spread Ammo and Spread- type arrows
+50,2,ammo up,Increases bowgun loading capacity. (There is a cap to loading capacity.)
+51,2,reload speed,Increases bowgun reloading and bow coating loading speed.
+52,2,recoil down,Reduces recoil when firing bowgun ammo.
+53,2,steadiness,Suppresses the deviation of bowgun shots.
+54,2,rapid fire up,Improves light bowgun rapid fire.
+55,2,defense boost,Increases defense. Resistances will also improve as the level increases.
+56,2,divine blessing,Has a predetermined chance of reducing the damage you take.
+57,2,recovery up,Increases the amount recovered when restoring health.
+58,2,recovery speed,Speeds healing of recoverable damage (the red portion of the health gauge).
+59,2,speed eating,Increases meat-eating and item-consumption speed.
+60,2,earplugs,Grants protection from large monsters' roars.
+61,2,windproof,Grants protection against wind pressure.
+62,2,tremor resistance,Grants protection against ground tremors.
+63,2,bubbly dance,Reduces bubbleblight and grants increased evasion when afflicted.
+64,2,evade window,Extends the invulnerability period when evading.
+65,2,evade extender,Increases evade distance.
+66,2,fire resistance,Increases fire resistance. Also improves defense at higher levels.
+67,2,water resistance,Increases water resistance. Also improves defense at higher levels.
+68,2,ice resistance,Increases ice resistance. Also improves defense at higher levels.
+69,2,thunder resistance,Increases thunder resistance. Also improves defense at higher levels.
+70,2,dragon resistance,Increases dragon resistance. Also improves defense at higher levels.
+71,2,blight resistance,Grants protection against all elemental blights.
+72,2,poison resistance,Reduces damage while poisoned.
+73,2,paralysis resistance,Reduces the duration of paralysis.
+74,2,sleep resistance,Reduces the duration of sleep.
+75,2,stun resistance,Reduces stun duration.
+76,2,muck resistance,Reduces impairments to mobility while stuck in monster muck or deep snow.
+77,2,blast resistance,Grants protection against blastblight.
+78,2,botanist,Increases the quantity of herbs and other consumable items you gather.
+79,2,geologist,Increases the number of times you can use a gathering point.
+80,2,partbreaker,Makes it easier to break or sever parts of large monsters.
+81,2,capture master,High chance of increased capture rewards. (No effect when joining mid-quest.)
+82,2,good luck,Good chance of increased quest rewards. (No effect when joining mid-quest.)
+83,2,speed sharpening,Speeds up weapon sharpening when using a whetstone.
+84,2,bombardier,Increases the damage of explosive items.
+85,2,mushroomancer,Lets you digest mushrooms that would otherwise be inedible and gain their advantageous effects.
+86,2,item prolonger,Extends the duration of some item effects.
+87,2,wide-range,Allows the effects of certain items to also affect nearby allies.
+88,2,free meal,Gives you a predetermined chance of consuming a food or drink item for free.
+89,2,heroics,Increases attack power and defense when health drops to 35% or lower.
+90,2,fortify,Increases your attack and defense when you fall in battle. (Disabled for some quests. Can stack twice.)
+91,2,flinch free,Prevents knockbacks and other reactions to small damage.
+92,2,jump master,Prevents attacks from knocking you back during a jump.
+93,2,carving pro,Prevents knockback from attacks while carving.
+94,2,hunger resistance,Reduces maximum stamina depletion over time.
+95,2,leap of faith,"Allows you to do a dive-evade when facing towards large monsters, and extends the dive-evade distance."
+96,2,diversion,Increases the attention drawn when attacking a monster.
+97,2,master mounter,Improves your Wyvern Riding skills.
+98,2,wirebug whisperer,Improves your handling of Wirebugs.
+99,2,wall runner,Reduces stamina consumption when running on walls.
+100,2,counterstrike,Temporarily increases attack power after being thrown off.
+101,2,rapid morph,Increases switch speed and power for switch axes and charge blades.
+102,2,hellfire cloak,Grants hellfire resistance and confers explosive hellfire power to your attacks.
+103,2,wind alignment,Gain the power of the elder dragon Wind Serpent Ibushi.
+104,2,thunder alignment,Gain the power of the elder dragon Thunder Serpent Narwa.

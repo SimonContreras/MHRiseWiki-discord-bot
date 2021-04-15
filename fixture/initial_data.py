@@ -362,6 +362,7 @@ def insert_help_commands_and_args():
     hab = Command(
         language = spanish,
         name = 'hab',
+        active=True,
         title = 'Información de habilidad',
         description = 'Muestra información de la habilidad.'
     )
@@ -369,7 +370,9 @@ def insert_help_commands_and_args():
     skill = Command(
         language = english,
         name = 'skill',
+        active=True,
         title = 'Skill Information',
+
         description = 'Show information about certain skill.'
     )
 
@@ -1550,6 +1553,97 @@ def more_monster_headers():
         id = 158,
         name = 'plagues',
         translation = 'Plagues',
+        type= 'title',
+        command = c_eng,
+    )
+
+def more_skill_headers():
+    spanish = Language.select(lambda l: l.initials == 'esp').first()
+    english = Language.select(lambda l: l.initials == 'eng').first()
+    c_esp = Command.select(lambda c: (c.language == spanish and c.name == 'hab')).first()
+    c_eng = Command.select(lambda c: (c.language == english and c.name == 'skill')).first()
+
+    h1_esp = Header(
+        id = 159,
+        name = 'deco',
+        translation = 'Decoración/Joya',
+        type= 'title',
+        command = c_esp,
+    )
+    h1_eng = Header(
+        id = 160,
+        name = 'deco',
+        translation = 'Decoration/Jewel',
+        type= 'title',
+        command = c_eng,
+    )
+    h2_esp = Header(
+        id = 161,
+        name = 'rarity',
+        translation = 'Rareza',
+        type= 'title',
+        command = c_esp,
+    )
+    h2_eng = Header(
+        id = 162,
+        name = 'rarity',
+        translation = 'Rarity',
+        type= 'title',
+        command = c_eng,
+    )
+    h3_esp = Header(
+        id = 163,
+        name = 'slots',
+        translation = 'Espacios',
+        type= 'title',
+        command = c_esp,
+    )
+    h3_eng = Header(
+        id = 164,
+        name = 'slots',
+        translation = 'Slots',
+        type= 'title',
+        command = c_eng,
+    )
+    h4_esp = Header(
+        id = 165,
+        name = 'skill_lvl',
+        translation = 'Nivel de habilidad',
+        type= 'title',
+        command = c_esp,
+    )
+    h4_eng = Header(
+        id = 166,
+        name = 'skill_lvl',
+        translation = 'Skill Level',
+        type= 'title',
+        command = c_eng,
+    )
+    h5_esp = Header(
+        id = 167,
+        name = 'unlock',
+        translation = 'Desbloqueable al cazar/llegar a',
+        type= 'title',
+        command = c_esp,
+    )
+    h5_eng = Header(
+        id = 168,
+        name = 'unlock',
+        translation = 'Unlocked at hunt/reach:',
+        type= 'title',
+        command = c_eng,
+    )
+    h6_esp = Header(
+        id = 169,
+        name = 'mats',
+        translation = 'Materiales',
+        type= 'title',
+        command = c_esp,
+    )
+    h6_eng = Header(
+        id = 170,
+        name = 'mats',
+        translation = 'Materials',
         type= 'title',
         command = c_eng,
     )

@@ -49,13 +49,13 @@ class SkillEmbed(discord.Embed):
         #embed.add_field(name=self._h['talisman'], value=self._dct['talisman'], inline=True)
         
         if self._dct['jewel'] is not None:
-            embed.add_field(name='Decoración/Joya', value='Click a :arrow_forward: para ver', inline=False)
+            embed.add_field(name=self._h['deco'], value='Click a :arrow_forward: para ver', inline=False)
             embed2 = discord.Embed(title=self._dct['jewel']['name'], description=self._dct['jewel']['description'], color=discord.Color.blue())
             embed2.set_thumbnail(url=f'''attachment://{self._dct['icon']}''')
-            embed2.add_field(name='Rareza', value=self._dct['jewel']['rarity'], inline=True)
-            embed2.add_field(name='Espacios', value=self._dct['jewel']['slot'], inline=True)
-            embed2.add_field(name='Nivel de habilidad', value=self._dct['jewel']['level'], inline=True)
-            embed2.add_field(name='Desbloqueable al cazar/llegar a', value=self._dct['jewel']['unlock'], inline=False)
-            embed2.add_field(name='Materiales', value=self._dct['jewel']['materials'], inline=False)
+            embed2.add_field(name=self._h['rarity'], value=self._dct['jewel']['rarity'], inline=True)
+            embed2.add_field(name=self._h['slots'], value=self._dct['jewel']['slot'], inline=True)
+            embed2.add_field(name=self._h['skill_lvl'], value=self._dct['jewel']['level'], inline=True)
+            embed2.add_field(name=self._h['unlock'], value=self._dct['jewel']['unlock'], inline=False)
+            embed2.add_field(name=self._h['mats'], value=self._dct['jewel']['materials'], inline=False)
         
         return embed, embed2
